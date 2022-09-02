@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../company/company_screen.dart';
 import '../home/home_screen.dart';
 
 class Header extends StatelessWidget {
@@ -51,6 +52,14 @@ class Header extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const CompanyScreen(),
+                      ),
+                    );
+                  },
                   child: const Text(
                     'Perusahaan Kami',
                     style: TextStyle(

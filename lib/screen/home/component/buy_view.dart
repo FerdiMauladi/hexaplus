@@ -33,12 +33,13 @@ class BuyView extends StatelessWidget {
               children: [
                 Container(
                   margin: const EdgeInsets.only(top: 50),
-                  child: const Text(
+                  child: Text(
                     'THE BEST WAY TO BUY',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 55,
-                      shadows: <Shadow>[
+                      fontSize:
+                          MediaQuery.of(context).size.width < 600 ? 45 : 55,
+                      shadows: const <Shadow>[
                         Shadow(
                           offset: Offset(2.0, 2.0),
                           blurRadius: 3.0,
@@ -50,12 +51,13 @@ class BuyView extends StatelessWidget {
                 ),
                 Container(
                   margin: const EdgeInsets.only(top: 10),
-                  child: const Text(
+                  child: Text(
                     'THE PRODUCT YOU LOVE',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 55,
-                      shadows: <Shadow>[
+                      fontSize:
+                          MediaQuery.of(context).size.width < 600 ? 45 : 55,
+                      shadows: const <Shadow>[
                         Shadow(
                           offset: Offset(2.0, 2.0),
                           blurRadius: 3.0,

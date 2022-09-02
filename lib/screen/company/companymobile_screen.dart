@@ -3,19 +3,17 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../component/drawer.dart';
 import '../component/footer.dart';
-import 'component/buy_view.dart';
-import 'component/pageone_view.dart';
-import 'component/pagetwo_view.dart';
-import 'component/product_view.dart';
+import '../home/component/pageone_view.dart';
+import '../home/component/pagetwo_view.dart';
 
-class HomeMobileScreen extends StatefulWidget {
-  const HomeMobileScreen({Key? key}) : super(key: key);
+class CompanyMobileScreen extends StatefulWidget {
+  const CompanyMobileScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeMobileScreen> createState() => _HomeMobileScreenState();
+  State<CompanyMobileScreen> createState() => _CompanyMobileScreenState();
 }
 
-class _HomeMobileScreenState extends State<HomeMobileScreen> {
+class _CompanyMobileScreenState extends State<CompanyMobileScreen> {
   final _controller = PageController();
 
   int _currentPage = 0;
@@ -94,8 +92,6 @@ class _HomeMobileScreenState extends State<HomeMobileScreen> {
               ],
             ),
           ),
-          const ProductView(),
-          const BuyView(),
           const Footer(),
         ],
       ),

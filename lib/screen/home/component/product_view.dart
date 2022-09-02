@@ -33,12 +33,13 @@ class ProductView extends StatelessWidget {
               children: [
                 Container(
                   margin: const EdgeInsets.only(top: 80),
-                  child: const Text(
+                  child: Text(
                     'OUR PRODUCT',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 55,
-                      shadows: <Shadow>[
+                      fontSize:
+                          MediaQuery.of(context).size.width < 600 ? 45 : 55,
+                      shadows: const <Shadow>[
                         Shadow(
                           offset: Offset(2.0, 2.0),
                           blurRadius: 3.0,

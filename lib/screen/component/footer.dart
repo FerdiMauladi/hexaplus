@@ -12,11 +12,11 @@ class Footer extends StatelessWidget {
       width: double.infinity,
       height: 200,
       padding: EdgeInsets.zero,
-      decoration: const BoxDecoration(
-        color: Colors.grey,
+      decoration: BoxDecoration(
+        color: Colors.grey.shade800,
       ),
       child: Padding(
-        padding: const EdgeInsets.all(25.0),
+        padding: const EdgeInsets.all(20.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
