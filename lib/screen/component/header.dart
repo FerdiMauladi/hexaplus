@@ -39,7 +39,7 @@ class Header extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.contain,
                   image: AssetImage(
-                    'assets/images/hexaplus.png',
+                    'assets/images/hexaplus1.png',
                   ),
                 ),
               ),
