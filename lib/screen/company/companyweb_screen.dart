@@ -101,32 +101,35 @@ class _CompanyWebScreenState extends State<CompanyWebScreen> {
             ),
           ),
           Container(
-            padding: const EdgeInsets.all(25.0),
+            margin: const EdgeInsets.only(
+              top: 15.0,
+              bottom: 50.0,
+            ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.4,
-                  height: 300,
+                  width: MediaQuery.of(context).size.width * 0.45,
+                  height: 550,
                   decoration: const BoxDecoration(
                     shape: BoxShape.rectangle,
                     image: DecorationImage(
                       fit: BoxFit.contain,
                       image: AssetImage(
-                        'assets/images/hexaplus.png',
+                        'assets/images/companypic1.png',
                       ),
                     ),
                   ),
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.4,
-                  height: 300,
+                  width: MediaQuery.of(context).size.width * 0.45,
+                  height: 550,
                   decoration: const BoxDecoration(
                     shape: BoxShape.rectangle,
                     image: DecorationImage(
                       fit: BoxFit.contain,
                       image: AssetImage(
-                        'assets/images/hexaplus.png',
+                        'assets/images/companypic2.png',
                       ),
                     ),
                   ),
