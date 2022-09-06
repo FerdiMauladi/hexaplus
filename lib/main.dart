@@ -41,7 +41,6 @@ class HexaPlus extends StatelessWidget {
         return null;
       },
       title: 'Hexa Smart',
-      home: const HomeScreen(),
     );
   }
 }
