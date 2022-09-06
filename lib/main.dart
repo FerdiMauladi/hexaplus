@@ -21,6 +21,25 @@ class HexaPlus extends StatelessWidget {
         HomeScreen.route: (context) => const HomeScreen(),
         CompanyScreen.route: (context) => const CompanyScreen(),
       },
+      onGenerateRoute: (settings) {
+        if (settings.name == HomeScreen.route) {
+          return MaterialPageRoute(
+            builder: (context) {
+              return const HomeScreen();
+            },
+          );
+        }
+        if (settings.name == CompanyScreen.route) {
+          return MaterialPageRoute(
+            builder: (context) {
+              return const CompanyScreen();
+            },
+          );
+        }
+
+        assert(false, 'Need to implement ${settings.name}');
+        return null;
+      },
       title: 'Hexa Smart',
       home: const HomeScreen(),
     );
