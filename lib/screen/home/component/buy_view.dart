@@ -34,16 +34,16 @@ class BuyView extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.only(top: 50),
                   child: Text(
-                    'THE BEST WAY TO BUY',
+                    'How To Shop',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize:
-                          MediaQuery.of(context).size.width < 600 ? 45 : 55,
+                          MediaQuery.of(context).size.width < 600 ? 35 : 45,
                       shadows: const <Shadow>[
                         Shadow(
                           offset: Offset(2.0, 2.0),
                           blurRadius: 3.0,
-                          color: Colors.grey,
+                          color: Colors.black,
                         ),
                       ],
                     ),
@@ -52,16 +52,16 @@ class BuyView extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.only(top: 10),
                   child: Text(
-                    'THE PRODUCT YOU LOVE',
+                    'Temukan kemudahan berbelanja di sini',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize:
-                          MediaQuery.of(context).size.width < 600 ? 45 : 55,
+                          MediaQuery.of(context).size.width < 600 ? 14 : 18,
                       shadows: const <Shadow>[
                         Shadow(
                           offset: Offset(2.0, 2.0),
                           blurRadius: 3.0,
-                          color: Colors.grey,
+                          color: Colors.black,
                         ),
                       ],
                     ),

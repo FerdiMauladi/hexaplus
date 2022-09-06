@@ -38,12 +38,48 @@ class ProductView extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize:
-                          MediaQuery.of(context).size.width < 600 ? 45 : 55,
+                          MediaQuery.of(context).size.width < 600 ? 35 : 45,
                       shadows: const <Shadow>[
                         Shadow(
                           offset: Offset(2.0, 2.0),
                           blurRadius: 3.0,
-                          color: Colors.grey,
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 20),
+                  child: Text(
+                    'Produk unggulan yang telah teruji',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize:
+                          MediaQuery.of(context).size.width < 600 ? 14 : 18,
+                      shadows: const <Shadow>[
+                        Shadow(
+                          offset: Offset(2.0, 2.0),
+                          blurRadius: 3.0,
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 10),
+                  child: Text(
+                    'memiliki pengalaman yang baik dari para pengguna',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize:
+                          MediaQuery.of(context).size.width < 600 ? 14 : 18,
+                      shadows: const <Shadow>[
+                        Shadow(
+                          offset: Offset(2.0, 2.0),
+                          blurRadius: 3.0,
+                          color: Colors.black,
                         ),
                       ],
                     ),
