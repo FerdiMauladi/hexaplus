@@ -23,12 +23,7 @@ class Header extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const HomeScreen(),
-                ),
-              );
+              Navigator.of(context).pushNamed(HomeScreen.route);
             },
             child: Container(
               alignment: Alignment.topCenter,
@@ -53,12 +48,7 @@ class Header extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const CompanyScreen(),
-                      ),
-                    );
+                    Navigator.of(context).pushNamed(CompanyScreen.route);
                   },
                   child: const Text(
                     'Perusahaan Kami',

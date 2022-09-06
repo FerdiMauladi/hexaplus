@@ -4,6 +4,7 @@ import 'companymobile_screen.dart';
 import 'companyweb_screen.dart';
 
 class CompanyScreen extends StatelessWidget {
+  static const String route = '/perusahaankami';
   const CompanyScreen({Key? key}) : super(key: key);
 
   @override

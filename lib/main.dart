@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:hexaplus/screen/company/company_screen.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 import 'screen/home/home_screen.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const HexaPlus());
 }
 
@@ -11,10 +14,14 @@ class HexaPlus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'HexaPlus',
-      home: HomeScreen(),
+      initialRoute: HomeScreen.route,
+      routes: {
+        HomeScreen.route: (context) => const HomeScreen(),
+        CompanyScreen.route: (context) => const CompanyScreen(),
+      },
     );
   }
 }
