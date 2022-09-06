@@ -28,8 +28,7 @@ class HexaPlus extends StatelessWidget {
               return const HomeScreen();
             },
           );
-        }
-        if (settings.name == CompanyScreen.route) {
+        } else if (settings.name == CompanyScreen.route) {
           return MaterialPageRoute(
             builder: (context) {
               return const CompanyScreen();
