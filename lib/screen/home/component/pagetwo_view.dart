@@ -47,12 +47,12 @@ class PageTwoScreen extends StatelessWidget {
               ),
               Container(
                 margin: const EdgeInsets.only(bottom: 5),
-                child: const Text(
+                child: Text(
                   'Ingin Hidup Lebih aman, Nyaman dan Efisien?',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
-                    shadows: <Shadow>[
+                    fontSize: MediaQuery.of(context).size.width < 600 ? 14 : 18,
+                    shadows: const <Shadow>[
                       Shadow(
                         offset: Offset(2.0, 2.0),
                         blurRadius: 3.0,
@@ -65,12 +65,12 @@ class PageTwoScreen extends StatelessWidget {
               ),
               Container(
                 margin: const EdgeInsets.only(bottom: 30),
-                child: const Text(
+                child: Text(
                   'Hexa+ Hadir untuk membantu mengatasi masalah tersebut.',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
-                    shadows: <Shadow>[
+                    fontSize: MediaQuery.of(context).size.width < 600 ? 14 : 18,
+                    shadows: const <Shadow>[
                       Shadow(
                         offset: Offset(2.0, 2.0),
                         blurRadius: 3.0,
