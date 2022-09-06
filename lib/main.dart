@@ -16,12 +16,17 @@ class HexaPlus extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+<<<<<<< Updated upstream
       title: 'HexaPlus',
       initialRoute: HomeScreen.route,
       routes: {
         HomeScreen.route: (context) => const HomeScreen(),
         CompanyScreen.route: (context) => const CompanyScreen(),
       },
+=======
+      title: 'Hexa Smart',
+      home: HomeScreen(),
+>>>>>>> Stashed changes
     );
   }
 }
