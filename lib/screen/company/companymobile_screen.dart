@@ -37,7 +37,7 @@ class _CompanyMobileScreenState extends State<CompanyMobileScreen> {
               image: DecorationImage(
                 fit: BoxFit.contain,
                 image: AssetImage(
-                  'assets/images/hexaplus.png',
+                  'assets/images/hexaplus1.png',
                 ),
               ),
             ),

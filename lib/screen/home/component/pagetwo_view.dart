@@ -30,16 +30,16 @@ class PageTwoScreen extends StatelessWidget {
             children: [
               Container(
                 margin: const EdgeInsets.only(bottom: 20),
-                child: const Text(
+                child: Text(
                   'Security Can Be Smart',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 55,
-                    shadows: <Shadow>[
+                    fontSize: MediaQuery.of(context).size.width < 600 ? 35 : 45,
+                    shadows: const <Shadow>[
                       Shadow(
                         offset: Offset(2.0, 2.0),
                         blurRadius: 3.0,
-                        color: Colors.grey,
+                        color: Colors.black,
                       ),
                     ],
                   ),
@@ -56,7 +56,7 @@ class PageTwoScreen extends StatelessWidget {
                       Shadow(
                         offset: Offset(2.0, 2.0),
                         blurRadius: 3.0,
-                        color: Colors.grey,
+                        color: Colors.black,
                       ),
                     ],
                   ),
@@ -74,7 +74,7 @@ class PageTwoScreen extends StatelessWidget {
                       Shadow(
                         offset: Offset(2.0, 2.0),
                         blurRadius: 3.0,
-                        color: Colors.grey,
+                        color: Colors.black,
                       ),
                     ],
                   ),
@@ -87,8 +87,9 @@ class PageTwoScreen extends StatelessWidget {
                 ),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.deepOrange,
-                    onSurface: Colors.orange,
+                    backgroundColor: Colors.blue,
+                    disabledForegroundColor: Colors.blue.withOpacity(0.38),
+                    disabledBackgroundColor: Colors.blue.withOpacity(0.12),
                     textStyle: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,

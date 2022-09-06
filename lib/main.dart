@@ -22,6 +22,7 @@ class HexaPlus extends StatelessWidget {
         CompanyScreen.route: (context) => const CompanyScreen(),
       },
       title: 'Hexa Smart',
+      home: const HomeScreen(),
     );
   }
 }

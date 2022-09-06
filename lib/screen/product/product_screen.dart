@@ -17,18 +17,18 @@ class ProductScreen extends StatelessWidget {
         ),
         actions: [
           Container(
-            alignment: Alignment.center,
-            padding: const EdgeInsets.only(right: 20.0),
-            child: const Text(
-              'HEXA+',
-              style: TextStyle(
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 5.0,
-                color: Colors.grey,
+            width: 120,
+            height: 100,
+            decoration: const BoxDecoration(
+              shape: BoxShape.rectangle,
+              image: DecorationImage(
+                fit: BoxFit.contain,
+                image: AssetImage(
+                  'assets/images/hexaplus1.png',
+                ),
               ),
             ),
-          )
+          ),
         ],
       ),
       body: ListView(
