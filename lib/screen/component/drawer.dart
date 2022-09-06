@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../home/home_screen.dart';
+import '../company/company_screen.dart';
 import '../product/product_screen.dart';
 
 class DrawerScreen extends StatelessWidget {
@@ -13,19 +13,31 @@ class DrawerScreen extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           ListTile(
-            title: const Text('Home'),
+            title: const Text('Perusahaan Kami'),
             onTap: () {
               Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const HomeScreen(),
+                  builder: (context) => const CompanyScreen(),
                 ),
                 (Route<dynamic> route) => false,
               );
             },
           ),
           ListTile(
-            title: const Text('Product'),
+            title: const Text('Produk Kami'),
+            onTap: () {
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ProductScreen(),
+                ),
+                (Route<dynamic> route) => false,
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Cara Membeli'),
             onTap: () {
               Navigator.pushAndRemoveUntil(
                 context,
