@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../component/drawer.dart';
 import '../component/footer.dart';
 import '../home/component/carousel_view.dart';
 import '../home/home_screen.dart';
+import 'component/companygrid_view.dart';
+import 'component/companytextone_view.dart';
+import 'component/companytexttwo_view.dart';
+import 'component/ourclient_view.dart';
 
 class CompanyMobileScreen extends StatelessWidget {
   const CompanyMobileScreen({Key? key}) : super(key: key);
@@ -44,6 +47,10 @@ class CompanyMobileScreen extends StatelessWidget {
         scrollDirection: Axis.vertical,
         children: const [
           CarouselView(),
+          CompanyTextOneView(),
+          CompanyGridView(),
+          CompanyTextTwoView(),
+          OurClientView(),
           Footer(),
         ],
       ),
