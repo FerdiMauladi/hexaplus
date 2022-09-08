@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
-class PageTwoScreen extends StatelessWidget {
-  const PageTwoScreen({
+class CarouselListView extends StatelessWidget {
+  final String image;
+  final String title;
+  final String subtitle1;
+  final String subtitle2;
+  const CarouselListView({
     Key? key,
+    required this.image,
+    required this.title,
+    required this.subtitle1,
+    required this.subtitle2,
   }) : super(key: key);
 
   @override
@@ -12,12 +20,12 @@ class PageTwoScreen extends StatelessWidget {
         Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             shape: BoxShape.rectangle,
             image: DecorationImage(
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
               image: AssetImage(
-                'assets/images/homescreentwo.png',
+                image,
               ),
             ),
           ),
@@ -31,10 +39,14 @@ class PageTwoScreen extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(bottom: 20),
                 child: Text(
-                  'Security Can Be Smart',
+                  title,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: MediaQuery.of(context).size.width < 600 ? 35 : 45,
+                    fontSize: MediaQuery.of(context).size.width < 600
+                        ? 35
+                        : MediaQuery.of(context).size.width < 1400
+                            ? 45
+                            : 55,
                     shadows: const <Shadow>[
                       Shadow(
                         offset: Offset(2.0, 2.0),
@@ -48,10 +60,14 @@ class PageTwoScreen extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(bottom: 5),
                 child: Text(
-                  'Ingin Hidup Lebih aman, Nyaman dan Efisien?',
+                  subtitle1,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: MediaQuery.of(context).size.width < 600 ? 14 : 18,
+                    fontSize: MediaQuery.of(context).size.width < 600
+                        ? 14
+                        : MediaQuery.of(context).size.width < 1400
+                            ? 18
+                            : 25,
                     shadows: const <Shadow>[
                       Shadow(
                         offset: Offset(2.0, 2.0),
@@ -66,10 +82,14 @@ class PageTwoScreen extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(bottom: 30),
                 child: Text(
-                  'Hexa+ Hadir untuk membantu mengatasi masalah tersebut.',
+                  subtitle2,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: MediaQuery.of(context).size.width < 600 ? 14 : 18,
+                    fontSize: MediaQuery.of(context).size.width < 600
+                        ? 14
+                        : MediaQuery.of(context).size.width < 1400
+                            ? 18
+                            : 25,
                     shadows: const <Shadow>[
                       Shadow(
                         offset: Offset(2.0, 2.0),

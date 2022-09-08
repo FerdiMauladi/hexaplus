@@ -9,14 +9,18 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (constraints.maxWidth < 600) {
-          return const HomeMobileScreen();
-        } else {
-          return const HomeWebScreen();
-        }
-      },
+    return Title(
+      color: Colors.white,
+      title: 'Hexa Smart',
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          if (constraints.maxWidth < 600) {
+            return const HomeMobileScreen();
+          } else {
+            return const HomeWebScreen();
+          }
+        },
+      ),
     );
   }
 }

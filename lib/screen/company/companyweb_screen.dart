@@ -1,83 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../model/company_grid_model.dart';
 import '../component/footer.dart';
 import '../component/header.dart';
-import '../home/component/pageone_view.dart';
-import '../home/component/pagetwo_view.dart';
+import '../home/component/carousel_view.dart';
 
-class CompanyWebScreen extends StatefulWidget {
+class CompanyWebScreen extends StatelessWidget {
   const CompanyWebScreen({Key? key}) : super(key: key);
-
-  @override
-  State<CompanyWebScreen> createState() => _CompanyWebScreenState();
-}
-
-class _CompanyWebScreenState extends State<CompanyWebScreen> {
-  final _controller = PageController();
-
-  int _currentPage = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
         children: [
           const Header(),
-          SizedBox(
-            width: double.infinity,
-            height: MediaQuery.of(context).size.height * 0.75,
-            child: Stack(
-              children: [
-                SizedBox(
-                  width: double.infinity,
-                  height: MediaQuery.of(context).size.height * 0.75,
-                  child: PageView(
-                    controller: _controller,
-                    scrollDirection: Axis.horizontal,
-                    onPageChanged: (int index) {
-                      setState(() {
-                        _currentPage = index;
-                      });
-                    },
-                    children: const [
-                      PageOneScreen(),
-                      PageTwoScreen(),
-                    ],
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.bottomCenter,
-                  margin: const EdgeInsets.only(
-                    bottom: 25,
-                  ),
-                  child: SmoothPageIndicator(
-                    controller: _controller,
-                    count: 2,
-                    onDotClicked: (index) => _controller.animateToPage(
-                      index,
-                      duration: const Duration(milliseconds: 400),
-                      curve: Curves.easeIn,
-                    ),
-                    effect: const SwapEffect(
-                      activeDotColor: Colors.grey,
-                      dotColor: Colors.white,
-                      dotHeight: 14,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          const CarouselView(),
           Container(
             padding: const EdgeInsets.all(25.0),
             child: Column(
-              children: const [
+              children: [
                 Text(
                   'Perangkat pintar secara mutlak mempengaruhi cara pikir dan hidup penggunanya.',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 25,
+                    fontSize: MediaQuery.of(context).size.width < 600
+                        ? 18
+                        : MediaQuery.of(context).size.width < 1400
+                            ? 22
+                            : 25,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -85,7 +34,11 @@ class _CompanyWebScreenState extends State<CompanyWebScreen> {
                   'Maka saatnya anda beralih sebelum tertinggal.',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 25,
+                    fontSize: MediaQuery.of(context).size.width < 600
+                        ? 18
+                        : MediaQuery.of(context).size.width < 1400
+                            ? 22
+                            : 25,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -93,7 +46,55 @@ class _CompanyWebScreenState extends State<CompanyWebScreen> {
                   'Smart Home membantu anda memiliki tempat yang lebih aman dan efisien.',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 25,
+                    fontSize: MediaQuery.of(context).size.width < 600
+                        ? 18
+                        : MediaQuery.of(context).size.width < 1400
+                            ? 22
+                            : 25,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 15.0,
+              ),
+              itemCount: dataCompanyGrid.length,
+              itemBuilder: (context, index) {
+                return Container(
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(
+                        dataCompanyGrid[index].image!,
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(25.0),
+            child: Column(
+              children: [
+                Text(
+                  'Hexa+ adalah jasa yang melayani berbagai bidang instalasi smart home. Hadir untuk memberikan keunggulan penuh bagi anda yang ingin memiliki rumah pintar hanya dalam satu genggaman tangan. Berbagai hunian dan industri telah mempercayakan kami untuk membantu mereka memiliki kehidupan yang lebih aman dan efisien. Kami membantu memberikan solusi tentang permasalahan anda sehari-hari melalui teknologi.',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: MediaQuery.of(context).size.width < 600
+                        ? 18
+                        : MediaQuery.of(context).size.width < 1400
+                            ? 22
+                            : 25,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -101,36 +102,42 @@ class _CompanyWebScreenState extends State<CompanyWebScreen> {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(
-              top: 15.0,
-              bottom: 50.0,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            padding: const EdgeInsets.all(25.0),
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height * 0.55,
+            child: Stack(
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.45,
-                  height: 550,
+                  width: double.infinity,
+                  height: MediaQuery.of(context).size.height * 0.55,
                   decoration: const BoxDecoration(
                     shape: BoxShape.rectangle,
                     image: DecorationImage(
-                      fit: BoxFit.contain,
+                      fit: BoxFit.cover,
                       image: AssetImage(
-                        'assets/images/companypic1.png',
+                        'assets/foto/gambar2.jpg',
                       ),
                     ),
                   ),
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.45,
-                  height: 550,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    image: DecorationImage(
-                      fit: BoxFit.contain,
-                      image: AssetImage(
-                        'assets/images/companypic2.png',
-                      ),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Our Client',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: MediaQuery.of(context).size.width < 600
+                          ? 35
+                          : MediaQuery.of(context).size.width < 1400
+                              ? 45
+                              : 55,
+                      shadows: const <Shadow>[
+                        Shadow(
+                          offset: Offset(2.0, 2.0),
+                          blurRadius: 3.0,
+                          color: Colors.black,
+                        ),
+                      ],
                     ),
                   ),
                 ),

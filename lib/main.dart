@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hexaplus/screen/company/company_screen.dart';
 import 'package:url_strategy/url_strategy.dart';
 
+import 'screen/company/company_screen.dart';
 import 'screen/home/home_screen.dart';
 
 void main() {

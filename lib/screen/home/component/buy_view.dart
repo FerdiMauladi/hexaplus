@@ -37,8 +37,11 @@ class BuyView extends StatelessWidget {
                     'How To Shop',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize:
-                          MediaQuery.of(context).size.width < 600 ? 35 : 45,
+                      fontSize: MediaQuery.of(context).size.width < 600
+                          ? 35
+                          : MediaQuery.of(context).size.width < 1400
+                              ? 45
+                              : 55,
                       shadows: const <Shadow>[
                         Shadow(
                           offset: Offset(2.0, 2.0),
@@ -55,8 +58,11 @@ class BuyView extends StatelessWidget {
                     'Temukan kemudahan berbelanja di sini',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize:
-                          MediaQuery.of(context).size.width < 600 ? 14 : 18,
+                      fontSize: MediaQuery.of(context).size.width < 600
+                          ? 14
+                          : MediaQuery.of(context).size.width < 1400
+                              ? 18
+                              : 25,
                       shadows: const <Shadow>[
                         Shadow(
                           offset: Offset(2.0, 2.0),
@@ -64,51 +70,6 @@ class BuyView extends StatelessWidget {
                           color: Colors.black,
                         ),
                       ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(25.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Container(
-                  alignment: Alignment.bottomRight,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.green,
-                      disabledForegroundColor: Colors.green.withOpacity(0.38),
-                      disabledBackgroundColor: Colors.green.withOpacity(0.12),
-                      textStyle: const TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                    ),
-                    onPressed: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.all(13.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const Text(
-                            'Konsultasi Gratis Sekarang!',
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(left: 5.0),
-                            child: const Icon(
-                              Icons.whatsapp_outlined,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ],
-                      ),
                     ),
                   ),
                 ),

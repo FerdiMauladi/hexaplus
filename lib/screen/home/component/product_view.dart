@@ -37,8 +37,11 @@ class ProductView extends StatelessWidget {
                     'OUR PRODUCT',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize:
-                          MediaQuery.of(context).size.width < 600 ? 35 : 45,
+                      fontSize: MediaQuery.of(context).size.width < 600
+                          ? 35
+                          : MediaQuery.of(context).size.width < 1400
+                              ? 45
+                              : 55,
                       shadows: const <Shadow>[
                         Shadow(
                           offset: Offset(2.0, 2.0),
@@ -55,8 +58,11 @@ class ProductView extends StatelessWidget {
                     'Produk unggulan yang telah teruji',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize:
-                          MediaQuery.of(context).size.width < 600 ? 14 : 18,
+                      fontSize: MediaQuery.of(context).size.width < 600
+                          ? 14
+                          : MediaQuery.of(context).size.width < 1400
+                              ? 18
+                              : 25,
                       shadows: const <Shadow>[
                         Shadow(
                           offset: Offset(2.0, 2.0),
@@ -73,8 +79,11 @@ class ProductView extends StatelessWidget {
                     'memiliki pengalaman yang baik dari para pengguna',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize:
-                          MediaQuery.of(context).size.width < 600 ? 14 : 18,
+                      fontSize: MediaQuery.of(context).size.width < 600
+                          ? 14
+                          : MediaQuery.of(context).size.width < 1400
+                              ? 18
+                              : 25,
                       shadows: const <Shadow>[
                         Shadow(
                           offset: Offset(2.0, 2.0),

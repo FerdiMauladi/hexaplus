@@ -12,7 +12,6 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 120,
       padding: EdgeInsets.zero,
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -26,7 +25,6 @@ class Header extends StatelessWidget {
               Navigator.of(context).pushNamed(HomeScreen.route);
             },
             child: Container(
-              alignment: Alignment.topCenter,
               width: 140,
               height: 85,
               decoration: const BoxDecoration(
@@ -42,38 +40,44 @@ class Header extends StatelessWidget {
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.8,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).pushNamed(CompanyScreen.route);
-                  },
-                  child: const Text(
-                    'Perusahaan Kami',
-                    style: TextStyle(
-                      fontSize: 16,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 25.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed(CompanyScreen.route);
+                    },
+                    child: Text(
+                      'Perusahaan Kami',
+                      style: TextStyle(
+                        fontSize:
+                            MediaQuery.of(context).size.width < 1400 ? 16 : 18,
+                      ),
                     ),
                   ),
-                ),
-                GestureDetector(
-                  child: const Text(
-                    'Produk Kami',
-                    style: TextStyle(
-                      fontSize: 16,
+                  GestureDetector(
+                    child: Text(
+                      'Produk Kami',
+                      style: TextStyle(
+                        fontSize:
+                            MediaQuery.of(context).size.width < 1400 ? 16 : 18,
+                      ),
                     ),
                   ),
-                ),
-                GestureDetector(
-                  child: const Text(
-                    'Cara Membeli',
-                    style: TextStyle(
-                      fontSize: 16,
+                  GestureDetector(
+                    child: Text(
+                      'Cara Membeli',
+                      style: TextStyle(
+                        fontSize:
+                            MediaQuery.of(context).size.width < 1400 ? 16 : 18,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],
