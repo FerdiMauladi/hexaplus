@@ -36,7 +36,7 @@ class HomeMobileScreen extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.contain,
                   image: AssetImage(
-                    'assets/images/hexaplus1.png',
+                    'assets/foto/hexaplus.png',
                   ),
                 ),
               ),

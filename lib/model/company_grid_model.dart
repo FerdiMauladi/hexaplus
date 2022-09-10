@@ -8,7 +8,7 @@ class CompanyGridModel {
 
 List<CompanyGridModel> dataCompanyGrid = [
   CompanyGridModel(
-    image: 'assets/images/companypic1.png',
+    image: 'assets/foto/gambar1.jpg',
   ),
   CompanyGridModel(
     image: 'assets/foto/gambar5.jpg',

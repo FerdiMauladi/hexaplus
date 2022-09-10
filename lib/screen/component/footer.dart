@@ -28,7 +28,7 @@ class Footer extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.contain,
                   image: AssetImage(
-                    'assets/images/smartwithus.png',
+                    'assets/logo/smartwithus.png',
                   ),
                 ),
               ),

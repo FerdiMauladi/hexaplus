@@ -51,7 +51,7 @@ class _CarouselViewState extends State<CarouselView> {
                   seconds: 6,
                 ),
                 autoPlayAnimationDuration: const Duration(
-                  seconds: 1,
+                  seconds: 2,
                 ),
                 enableInfiniteScroll: false,
                 initialPage: _current,

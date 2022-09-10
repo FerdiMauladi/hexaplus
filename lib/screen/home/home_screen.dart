@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import 'homemobile_screen.dart';
@@ -16,6 +18,9 @@ class HomeScreen extends StatelessWidget {
         builder: (context, constraints) {
           if (constraints.maxWidth < 600) {
             return const HomeMobileScreen();
+          } else if (constraints.maxWidth < 600 &&
+              (Platform.isAndroid || Platform.isIOS)) {
+            return const HomeWebScreen();
           } else {
             return const HomeWebScreen();
           }

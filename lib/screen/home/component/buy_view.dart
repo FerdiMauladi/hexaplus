@@ -20,7 +20,7 @@ class BuyView extends StatelessWidget {
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
-                  'assets/images/buyhomescreen.png',
+                  'assets/foto/gambar7.jpg',
                 ),
               ),
             ),

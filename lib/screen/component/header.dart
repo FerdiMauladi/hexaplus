@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../company/company_screen.dart';
 import '../home/home_screen.dart';
+import '../product/product_screen.dart';
 
 class Header extends StatelessWidget {
   const Header({
@@ -32,7 +33,7 @@ class Header extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.contain,
                   image: AssetImage(
-                    'assets/images/hexaplus1.png',
+                    'assets/logo/hexaplus.png',
                   ),
                 ),
               ),
@@ -59,6 +60,9 @@ class Header extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed(ProductScreen.route);
+                    },
                     child: Text(
                       'Produk Kami',
                       style: TextStyle(

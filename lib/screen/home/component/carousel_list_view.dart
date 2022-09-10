@@ -23,7 +23,7 @@ class CarouselListView extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.rectangle,
             image: DecorationImage(
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
               image: AssetImage(
                 image,
               ),

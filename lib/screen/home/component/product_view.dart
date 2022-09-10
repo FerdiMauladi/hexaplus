@@ -20,7 +20,7 @@ class ProductView extends StatelessWidget {
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
-                  'assets/images/producthome.png',
+                  'assets/foto/gambar13.jpg',
                 ),
               ),
             ),
@@ -34,7 +34,7 @@ class ProductView extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.only(top: 80),
                   child: Text(
-                    'OUR PRODUCT',
+                    'Our Product',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: MediaQuery.of(context).size.width < 600
