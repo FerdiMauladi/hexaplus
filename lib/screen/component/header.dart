@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../company/company_screen.dart';
 import '../home/home_screen.dart';
+import '../howtobuy/howtobuy_screen.dart';
 import '../product/product_screen.dart';
 
 class Header extends StatelessWidget {
@@ -72,6 +73,9 @@ class Header extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed(HowToBuyScreen.route);
+                    },
                     child: Text(
                       'Cara Membeli',
                       style: TextStyle(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../company/company_screen.dart';
+import '../howtobuy/howtobuy_screen.dart';
 import '../product/product_screen.dart';
 
 class DrawerScreen extends StatelessWidget {
@@ -30,7 +31,7 @@ class DrawerScreen extends StatelessWidget {
             title: const Text('Cara Membeli'),
             onTap: () {
               Navigator.pop(context);
-              Navigator.of(context).pushNamed(CompanyScreen.route);
+              Navigator.of(context).pushNamed(HowToBuyScreen.route);
             },
           ),
         ],
