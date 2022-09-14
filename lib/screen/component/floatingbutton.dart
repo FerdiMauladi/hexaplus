@@ -44,7 +44,7 @@ class _FloatingButtonState extends State<FloatingButton> {
             children: [
               if (status == true)
                 Text(
-                  'Konsultasi Gratis Sekarang!',
+                  'Konsultasi gratis dengan kami, sekarang!',
                   style: TextStyle(
                     fontSize: MediaQuery.of(context).size.width < 400 ? 12 : 15,
                   ),

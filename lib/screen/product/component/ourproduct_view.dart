@@ -20,7 +20,6 @@ class OurProductView extends StatelessWidget {
               image: DecorationImage(
                 fit: BoxFit.cover,
                 alignment: Alignment.center,
-                scale: 0.5,
                 image: AssetImage(
                   'assets/foto/gambar13.jpg',
                 ),
