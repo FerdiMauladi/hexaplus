@@ -28,7 +28,7 @@ class Header extends StatelessWidget {
             },
             child: Container(
               width: 140,
-              height: 85,
+              height: 50,
               decoration: const BoxDecoration(
                 shape: BoxShape.rectangle,
                 image: DecorationImage(
@@ -43,7 +43,7 @@ class Header extends StatelessWidget {
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.8,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 25.0),
+              padding: const EdgeInsets.only(bottom: 15.0, top: 15.0),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

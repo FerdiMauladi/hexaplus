@@ -1,10 +1,8 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../component/drawer.dart';
-import '../component/floatingbutton.dart';
+
+import '../component/floatingbuttonicon.dart';
 import '../component/footer.dart';
 import 'component/buy_view.dart';
 import 'component/carousel_view.dart';
@@ -54,7 +52,7 @@ class HomeMobileScreen extends StatelessWidget {
               Footer(),
             ],
           ),
-          const FloatingButton(),
+          const FloatingButtonIcon(),
         ],
       ),
     );
