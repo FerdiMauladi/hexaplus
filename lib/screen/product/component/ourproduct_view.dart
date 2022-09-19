@@ -9,17 +9,16 @@ class OurProductView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height * 0.6,
+      height: MediaQuery.of(context).size.height * 0.8,
       child: Stack(
         children: [
           Container(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height * 0.6,
+            height: MediaQuery.of(context).size.height * 0.8,
             decoration: const BoxDecoration(
               shape: BoxShape.rectangle,
               image: DecorationImage(
                 fit: BoxFit.cover,
-                alignment: Alignment.center,
                 image: AssetImage(
                   'assets/foto/gambar13.jpg',
                 ),

@@ -6,89 +6,112 @@ import '../howtobuy/howtobuy_screen.dart';
 import '../product/product_screen.dart';
 
 class Header extends StatelessWidget {
+  final bool status;
   const Header({
+    required this.status,
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.zero,
-      decoration: const BoxDecoration(
-        color: Colors.white,
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context).pushNamed(HomeScreen.route);
-            },
-            child: Container(
-              width: 140,
-              height: 50,
-              decoration: const BoxDecoration(
-                shape: BoxShape.rectangle,
-                image: DecorationImage(
-                  fit: BoxFit.contain,
-                  image: AssetImage(
-                    'assets/logo/hexaplus.png',
+    return Material(
+      color: status ? Colors.black : Colors.transparent,
+      shadowColor: Colors.grey.withOpacity(0.5),
+      elevation: status ? 10 : 0,
+      child: Container(
+        width: double.infinity,
+        padding: EdgeInsets.zero,
+        decoration: BoxDecoration(
+          color: status ? Colors.black : Colors.transparent,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            MouseRegion(
+              cursor: SystemMouseCursors.click,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed(HomeScreen.route);
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(top: 15.0),
+                  width: 120,
+                  height: 50,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    image: DecorationImage(
+                      fit: BoxFit.contain,
+                      image: AssetImage(
+                        'assets/logo/hexaplus.png',
+                      ),
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width * 0.8,
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 15.0, top: 15.0),
+            Container(
+              margin: const EdgeInsets.only(top: 20.0, bottom: 15.0),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pushNamed(CompanyScreen.route);
-                    },
-                    child: Text(
-                      'Perusahaan Kami',
-                      style: TextStyle(
-                        fontSize:
-                            MediaQuery.of(context).size.width < 1400 ? 16 : 18,
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pushNamed(CompanyScreen.route);
+                      },
+                      child: Text(
+                        'Perusahaan Kami',
+                        style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.width < 1400
+                              ? 16
+                              : 18,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pushNamed(ProductScreen.route);
-                    },
-                    child: Text(
-                      'Produk Kami',
-                      style: TextStyle(
-                        fontSize:
-                            MediaQuery.of(context).size.width < 1400 ? 16 : 18,
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pushNamed(ProductScreen.route);
+                      },
+                      child: Text(
+                        'Produk Kami',
+                        style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.width < 1400
+                              ? 16
+                              : 18,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pushNamed(HowToBuyScreen.route);
-                    },
-                    child: Text(
-                      'Cara Membeli',
-                      style: TextStyle(
-                        fontSize:
-                            MediaQuery.of(context).size.width < 1400 ? 16 : 18,
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pushNamed(HowToBuyScreen.route);
+                      },
+                      child: Text(
+                        'Cara Membeli',
+                        style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.width < 1400
+                              ? 16
+                              : 18,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

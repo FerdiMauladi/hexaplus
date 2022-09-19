@@ -11,7 +11,9 @@ class HowToBuyWebScreen extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: const [
-          Header(),
+          Header(
+            status: false,
+          ),
           Footer(),
         ],
       ),
