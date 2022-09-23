@@ -1,14 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class SmartcctvView extends StatefulWidget {
-  const SmartcctvView({Key? key}) : super(key: key);
+class SmartAnotherView extends StatefulWidget {
+  const SmartAnotherView({Key? key}) : super(key: key);
 
   @override
-  State<SmartcctvView> createState() => _SmartcctvViewState();
+  State<SmartAnotherView> createState() => _SmartAnotherViewState();
 }
 
-class _SmartcctvViewState extends State<SmartcctvView> {
+class _SmartAnotherViewState extends State<SmartAnotherView> {
   CarouselController carouselController = CarouselController();
 
   int _current = 1;
@@ -19,12 +19,12 @@ class _SmartcctvViewState extends State<SmartcctvView> {
       children: [
         SizedBox(
           width: double.infinity,
-          height: 880,
+          height: 600,
           child: Stack(
             children: [
               Container(
                 width: double.infinity,
-                height: 880,
+                height: 600,
                 color: Colors.white,
               ),
               SizedBox(
@@ -40,7 +40,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: AssetImage(
-                            'assets/foto/smartcctv.png',
+                            'assets/foto/smartanother.png',
                           ),
                         ),
                       ),
@@ -52,7 +52,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Smart CCTV',
+                            'Produk Smart Home Lainnya',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: MediaQuery.of(context).size.width < 600
@@ -72,7 +72,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                           Container(
                             margin: const EdgeInsets.only(top: 10),
                             child: Text(
-                              'Aman, Pintar, dan Mudah',
+                              'Hunian lebih aman dan efisien dengan teknologi',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: MediaQuery.of(context).size.width <
@@ -97,67 +97,6 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                   ],
                 ),
               ),
-              Positioned(
-                left: 0,
-                right: 0,
-                bottom: 0,
-                child: Container(
-                  alignment: Alignment.center,
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  height: 680,
-                  padding: EdgeInsets.zero,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Image.asset(
-                            'produk/cctv/indoor/bardiIndoor.png',
-                            fit: BoxFit.contain,
-                            alignment: Alignment.bottomCenter,
-                            width: MediaQuery.of(context).size.width * 0.5,
-                            height: 500,
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(top: 5),
-                            child: const Text(
-                              'Indoor Smart CCTV',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 24,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Image.asset(
-                            'produk/cctv/outdoor/onassisOutdoor.png',
-                            fit: BoxFit.cover,
-                            alignment: Alignment.bottomCenter,
-                            width: MediaQuery.of(context).size.width * 0.5,
-                            height: 620,
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(top: 5),
-                            child: const Text(
-                              'Outdoor Smart CCTV',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 24,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
             ],
           ),
         ),
@@ -167,60 +106,36 @@ class _SmartcctvViewState extends State<SmartcctvView> {
           decoration: const BoxDecoration(
             color: Colors.white,
           ),
-          child: Column(
-            children: [
-              Container(
-                alignment: Alignment.centerLeft,
-                padding: const EdgeInsets.only(
-                  left: 15,
-                  right: 15,
-                ),
-                margin: EdgeInsets.only(
-                  left: MediaQuery.of(context).size.width * 0.05,
-                  top: MediaQuery.of(context).size.height * 0.1,
-                ),
-                decoration: const BoxDecoration(
-                  border: Border(
-                    left: BorderSide(
-                      width: 5,
-                      color: Colors.orange,
-                    ),
-                  ),
-                ),
-                child: Text(
-                  'Smart CCTV Indoor',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: MediaQuery.of(context).size.width < 600
-                        ? 14
-                        : MediaQuery.of(context).size.width < 1400
-                            ? 18
-                            : 24,
-                  ),
+          child: Container(
+            alignment: Alignment.centerLeft,
+            padding: const EdgeInsets.only(
+              left: 15,
+              right: 15,
+            ),
+            margin: EdgeInsets.only(
+              left: MediaQuery.of(context).size.width * 0.05,
+              top: MediaQuery.of(context).size.height * 0.07,
+              bottom: MediaQuery.of(context).size.height * 0.07,
+            ),
+            decoration: const BoxDecoration(
+              border: Border(
+                left: BorderSide(
+                  width: 5,
+                  color: Colors.orange,
                 ),
               ),
-              Container(
-                alignment: Alignment.centerLeft,
-                padding: const EdgeInsets.only(
-                  left: 55,
-                ),
-                margin: EdgeInsets.only(
-                  left: MediaQuery.of(context).size.width * 0.05,
-                  top: 15,
-                ),
-                child: Text(
-                  'Varian',
-                  style: TextStyle(
-                    color: Colors.black.withOpacity(0.7),
-                    fontSize: MediaQuery.of(context).size.width < 600
-                        ? 14
-                        : MediaQuery.of(context).size.width < 1400
-                            ? 18
-                            : 24,
-                  ),
-                ),
+            ),
+            child: Text(
+              'Varian',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: MediaQuery.of(context).size.width < 600
+                    ? 14
+                    : MediaQuery.of(context).size.width < 1400
+                        ? 18
+                        : 24,
               ),
-            ],
+            ),
           ),
         ),
         SizedBox(
@@ -357,14 +272,14 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Image.asset(
-                                      'produk/cctv/indoor/bardiIndoor.png',
+                                      'produk/lainnya/bardiPetFeeder.png',
                                       fit: BoxFit.contain,
                                       width: MediaQuery.of(context).size.width *
                                           0.3,
                                       height: 300,
                                     ),
                                     const Text(
-                                      'Bardi',
+                                      'Bardi Smart Pet Feeder',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 18,

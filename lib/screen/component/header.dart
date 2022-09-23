@@ -19,7 +19,7 @@ class Header extends StatelessWidget {
       shadowColor: Colors.grey.withOpacity(0.5),
       elevation: status ? 10 : 0,
       child: Container(
-        width: double.infinity,
+        width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.zero,
         decoration: BoxDecoration(
           color: status ? Colors.black : Colors.transparent,
@@ -43,7 +43,7 @@ class Header extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.contain,
                       image: AssetImage(
-                        'assets/logo/hexaplus.png',
+                        'assets/hexa/logoHexa_tulisa.png',
                       ),
                     ),
                   ),

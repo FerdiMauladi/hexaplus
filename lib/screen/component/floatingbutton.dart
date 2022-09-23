@@ -32,16 +32,46 @@ class _FloatingButtonState extends State<FloatingButton> {
             status = false;
           });
         },
-        child: FloatingActionButton.extended(
-          onPressed: () {},
-          shape: const CircleBorder(),
-          backgroundColor: Colors.green,
-          label: Icon(
-            Icons.whatsapp_outlined,
-            color: Colors.white,
-            size: MediaQuery.of(context).size.width < 400 ? 18 : 32,
-          ),
-        ),
+        child: status
+            ? FloatingActionButton.extended(
+                onPressed: () {},
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15.0),
+                  ),
+                ),
+                backgroundColor: Colors.green,
+                label: Row(
+                  children: [
+                    if (status == true)
+                      Text(
+                        'Konsultasi Gratis Sekarang!',
+                        style: TextStyle(
+                          fontSize:
+                              MediaQuery.of(context).size.width < 400 ? 12 : 15,
+                        ),
+                      ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 5.0),
+                      child: Icon(
+                        Icons.whatsapp_outlined,
+                        color: Colors.white,
+                        size: MediaQuery.of(context).size.width < 400 ? 18 : 25,
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            : FloatingActionButton.extended(
+                onPressed: () {},
+                shape: const CircleBorder(),
+                backgroundColor: Colors.green,
+                label: Icon(
+                  Icons.whatsapp_outlined,
+                  color: Colors.white,
+                  size: MediaQuery.of(context).size.width < 400 ? 18 : 32,
+                ),
+              ),
       ),
     );
   }

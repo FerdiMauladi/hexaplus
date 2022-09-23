@@ -1,14 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class SmartcctvView extends StatefulWidget {
-  const SmartcctvView({Key? key}) : super(key: key);
+class SmartLightView extends StatefulWidget {
+  const SmartLightView({Key? key}) : super(key: key);
 
   @override
-  State<SmartcctvView> createState() => _SmartcctvViewState();
+  State<SmartLightView> createState() => _SmartLightViewState();
 }
 
-class _SmartcctvViewState extends State<SmartcctvView> {
+class _SmartLightViewState extends State<SmartLightView> {
   CarouselController carouselController = CarouselController();
 
   int _current = 1;
@@ -40,7 +40,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: AssetImage(
-                            'assets/foto/smartcctv.png',
+                            'assets/foto/gambar3.jpg',
                           ),
                         ),
                       ),
@@ -52,7 +52,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Smart CCTV',
+                            'Smart Light',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: MediaQuery.of(context).size.width < 600
@@ -72,7 +72,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                           Container(
                             margin: const EdgeInsets.only(top: 10),
                             child: Text(
-                              'Aman, Pintar, dan Mudah',
+                              'Hunian lebih aman dan efisien dengan teknologi',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: MediaQuery.of(context).size.width <
@@ -114,7 +114,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Image.asset(
-                            'produk/cctv/indoor/bardiIndoor.png',
+                            'produk/light/bulb/arbitBulb.png',
                             fit: BoxFit.contain,
                             alignment: Alignment.bottomCenter,
                             width: MediaQuery.of(context).size.width * 0.5,
@@ -123,7 +123,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                           Container(
                             margin: const EdgeInsets.only(top: 5),
                             child: const Text(
-                              'Indoor Smart CCTV',
+                              'Smart Light Bulb',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 24,
@@ -136,16 +136,16 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Image.asset(
-                            'produk/cctv/outdoor/onassisOutdoor.png',
-                            fit: BoxFit.cover,
+                            'produk/light/strip/arbitStrip.png',
+                            fit: BoxFit.contain,
                             alignment: Alignment.bottomCenter,
                             width: MediaQuery.of(context).size.width * 0.5,
-                            height: 620,
+                            height: 500,
                           ),
                           Container(
                             margin: const EdgeInsets.only(top: 5),
                             child: const Text(
-                              'Outdoor Smart CCTV',
+                              'Smart LED Strip',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 24,
@@ -188,7 +188,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                   ),
                 ),
                 child: Text(
-                  'Smart CCTV Indoor',
+                  'Smart Light Bulb',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: MediaQuery.of(context).size.width < 600
@@ -263,7 +263,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'BARDI Indoor Smart CCTV',
+                                  'BARDI Smart Light Bulb 12W',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
@@ -272,7 +272,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                 Container(
                                   margin: const EdgeInsets.only(top: 10),
                                   child: const Text(
-                                    'Seberapa sering anda merasa cemas setiap meninggalkan rumah ? Kini anda tidak perlu khawatir lagi jika harus meninggalkan barang-barang berharga. Smart CCTV mampu memantau kondisi tempat anda 24 jam, sudah terekam otomatis, dan bisa diputar ulang kapanpun anda mau. Smart CCTV juga bisa memberikan notifikasi ketika terekam pergerakan.',
+                                    'Lampu adalah benda essensial untuk menerangi ruangan yang membuat anda bisa melakukan banyak pekerjaan. Namun seringkali kita repot dengan menyala dan mematikan lampu pada jam-jam tertentu. Kini dengan lampu pintar, anda bisa menjadwalkan kapan lampu anda nyala dan mati otomatis. Dipenuhi dengan 12 juta warna, anda bisa memilih warna sesuka hati. Kini tidak perlu lagi khawatir menyalakan lampu ketika berada diluar rumah karena bisa diatur dari manapun anda berada.',
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 18,
@@ -357,14 +357,14 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Image.asset(
-                                      'produk/cctv/indoor/bardiIndoor.png',
+                                      'produk/light/bulb/arbitBulb.png',
                                       fit: BoxFit.contain,
                                       width: MediaQuery.of(context).size.width *
                                           0.3,
                                       height: 300,
                                     ),
                                     const Text(
-                                      'Bardi',
+                                      'BARDI Smart Light Bulb 12W',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 18,

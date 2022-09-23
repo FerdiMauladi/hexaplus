@@ -1,14 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class SmartcctvView extends StatefulWidget {
-  const SmartcctvView({Key? key}) : super(key: key);
+class SmartDoorLockView extends StatefulWidget {
+  const SmartDoorLockView({Key? key}) : super(key: key);
 
   @override
-  State<SmartcctvView> createState() => _SmartcctvViewState();
+  State<SmartDoorLockView> createState() => _SmartDoorLockViewState();
 }
 
-class _SmartcctvViewState extends State<SmartcctvView> {
+class _SmartDoorLockViewState extends State<SmartDoorLockView> {
   CarouselController carouselController = CarouselController();
 
   int _current = 1;
@@ -40,7 +40,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: AssetImage(
-                            'assets/foto/smartcctv.png',
+                            'assets/foto/smartdoorlock.png',
                           ),
                         ),
                       ),
@@ -52,7 +52,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Smart CCTV',
+                            'Smart Door Lock',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: MediaQuery.of(context).size.width < 600
@@ -72,7 +72,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                           Container(
                             margin: const EdgeInsets.only(top: 10),
                             child: Text(
-                              'Aman, Pintar, dan Mudah',
+                              'Hunian lebih aman dan efisien dengan teknologi',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: MediaQuery.of(context).size.width <
@@ -114,16 +114,16 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Image.asset(
-                            'produk/cctv/indoor/bardiIndoor.png',
+                            'produk/doorlock/kayu/onassisk10pro.png',
                             fit: BoxFit.contain,
                             alignment: Alignment.bottomCenter,
-                            width: MediaQuery.of(context).size.width * 0.5,
+                            width: MediaQuery.of(context).size.width * 0.33,
                             height: 500,
                           ),
                           Container(
                             margin: const EdgeInsets.only(top: 5),
                             child: const Text(
-                              'Indoor Smart CCTV',
+                              'Pintu Kayu',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 24,
@@ -136,16 +136,38 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Image.asset(
-                            'produk/cctv/outdoor/onassisOutdoor.png',
-                            fit: BoxFit.cover,
+                            'produk/doorlock/alumunium/onassisd65.png',
+                            fit: BoxFit.contain,
                             alignment: Alignment.bottomCenter,
-                            width: MediaQuery.of(context).size.width * 0.5,
-                            height: 620,
+                            width: MediaQuery.of(context).size.width * 0.33,
+                            height: 500,
                           ),
                           Container(
                             margin: const EdgeInsets.only(top: 5),
                             child: const Text(
-                              'Outdoor Smart CCTV',
+                              'Pintu Alumunium',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 24,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Image.asset(
+                            'produk/doorlock/kaca/arbitGlass.png',
+                            fit: BoxFit.contain,
+                            alignment: Alignment.bottomCenter,
+                            width: MediaQuery.of(context).size.width * 0.33,
+                            height: 500,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(top: 5),
+                            child: const Text(
+                              'Pintu Kaca',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 24,
@@ -263,7 +285,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'BARDI Indoor Smart CCTV',
+                                  'Onassis K10 Pro',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
@@ -272,7 +294,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                 Container(
                                   margin: const EdgeInsets.only(top: 10),
                                   child: const Text(
-                                    'Seberapa sering anda merasa cemas setiap meninggalkan rumah ? Kini anda tidak perlu khawatir lagi jika harus meninggalkan barang-barang berharga. Smart CCTV mampu memantau kondisi tempat anda 24 jam, sudah terekam otomatis, dan bisa diputar ulang kapanpun anda mau. Smart CCTV juga bisa memberikan notifikasi ketika terekam pergerakan.',
+                                    'Hal yang paling menyebalkan adalah menunggu. 1 rumah yang dihuni oleh banyak orang sering kali membuat satu sama lainnya menunggu untuk mendapatkan kunci masuk. Namun kunci pintar kini hadir membantu anda memiliki kehidupan yang lebih mudah. Anda tidak harus menunggu atau menduplikat kunci agar anggota keluarga atau kerabat anda bisa masuk, sebab hanya melalui password dan fitur pembuka kunci lainnya anda bisa membuka pintu rumah dengan mudah.',
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 18,
@@ -357,14 +379,14 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Image.asset(
-                                      'produk/cctv/indoor/bardiIndoor.png',
+                                      'produk/doorlock/kayu/onassisk10pro.png',
                                       fit: BoxFit.contain,
                                       width: MediaQuery.of(context).size.width *
                                           0.3,
                                       height: 300,
                                     ),
                                     const Text(
-                                      'Bardi',
+                                      'Onassis K10 Pro',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 18,

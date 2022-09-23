@@ -22,12 +22,12 @@ class _CarouselViewState extends State<CarouselView> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height * 0.815,
+      height: MediaQuery.of(context).size.height * 1,
       child: Stack(
         children: [
           SizedBox(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height * 0.815,
+            height: MediaQuery.of(context).size.height * 1,
             child: CarouselSlider.builder(
               itemCount: dataView.length,
               itemBuilder: (context, index, realIndex) {

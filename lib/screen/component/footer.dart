@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../home/home_screen.dart';
-
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
 
@@ -114,7 +112,7 @@ class Footer extends StatelessWidget {
                 ),
               ),
               child: const Text(
-                'Hexa+ © 2022',
+                'Hexa © 2022',
                 style: TextStyle(
                   color: Colors.white,
                 ),
