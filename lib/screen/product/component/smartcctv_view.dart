@@ -163,7 +163,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
         ),
         Container(
           width: double.infinity,
-          height: MediaQuery.of(context).size.height * 0.2,
+          height: 150,
           decoration: const BoxDecoration(
             color: Colors.white,
           ),
@@ -177,7 +177,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                 ),
                 margin: EdgeInsets.only(
                   left: MediaQuery.of(context).size.width * 0.05,
-                  top: MediaQuery.of(context).size.height * 0.1,
+                  top: 75,
                 ),
                 decoration: const BoxDecoration(
                   border: Border(
@@ -252,9 +252,15 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                         children: [
                           Container(
                             width: MediaQuery.of(context).size.width * 0.5,
-                            padding: const EdgeInsets.only(
+                            padding: EdgeInsets.only(
                               top: 40.0,
-                              right: 150.0,
+                              right: MediaQuery.of(context).size.width < 1000
+                                  ? MediaQuery.of(context).size.width < 900
+                                      ? MediaQuery.of(context).size.width < 800
+                                          ? 25.0
+                                          : 50.0
+                                      : 80.0
+                                  : 150.0,
                               left: 20.0,
                               bottom: 40.0,
                             ),
@@ -277,7 +283,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                       color: Colors.white,
                                       fontSize: 18,
                                     ),
-                                    textAlign: TextAlign.justify,
+                                    textAlign: TextAlign.start,
                                   ),
                                 ),
                               ],
@@ -319,25 +325,20 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                   width: MediaQuery.of(context).size.width,
                   height: 380,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.zero,
-                            alignment: Alignment.topRight,
-                            width: MediaQuery.of(context).size.width * 0.125,
-                            height: 200,
-                            child: const Icon(
-                              Icons.arrow_back_ios_new_rounded,
-                              size: 150,
-                              color: Colors.black54,
-                            ),
-                          ),
-                        ],
+                      Container(
+                        padding: EdgeInsets.zero,
+                        alignment: Alignment.centerLeft,
+                        width: MediaQuery.of(context).size.width * 0.125,
+                        height: 200,
+                        child: Icon(
+                          Icons.arrow_back_ios_new_rounded,
+                          size: MediaQuery.of(context).size.width * 0.15,
+                          color: Colors.black54,
+                        ),
                       ),
                       Container(
+                        alignment: Alignment.center,
                         padding: EdgeInsets.zero,
                         width: MediaQuery.of(context).size.width * 0.75,
                         height: 380,
@@ -353,8 +354,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                 height: 380,
                                 padding: EdgeInsets.zero,
                                 child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Image.asset(
                                       'produk/cctv/indoor/bardiIndoor.png',
@@ -392,12 +392,12 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                       ),
                       Container(
                         padding: EdgeInsets.zero,
-                        alignment: Alignment.topLeft,
-                        width: MediaQuery.of(context).size.width * 0.11,
+                        alignment: Alignment.centerRight,
+                        width: MediaQuery.of(context).size.width * 0.125,
                         height: 200,
-                        child: const Icon(
+                        child: Icon(
                           Icons.arrow_forward_ios_rounded,
-                          size: 150,
+                          size: MediaQuery.of(context).size.width * 0.15,
                           color: Colors.black54,
                         ),
                       ),

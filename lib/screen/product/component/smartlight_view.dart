@@ -163,7 +163,7 @@ class _SmartLightViewState extends State<SmartLightView> {
         ),
         Container(
           width: double.infinity,
-          height: MediaQuery.of(context).size.height * 0.2,
+          height: 150,
           decoration: const BoxDecoration(
             color: Colors.white,
           ),
@@ -177,7 +177,7 @@ class _SmartLightViewState extends State<SmartLightView> {
                 ),
                 margin: EdgeInsets.only(
                   left: MediaQuery.of(context).size.width * 0.05,
-                  top: MediaQuery.of(context).size.height * 0.1,
+                  top: 75,
                 ),
                 decoration: const BoxDecoration(
                   border: Border(

@@ -22,7 +22,7 @@ class Header extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.zero,
         decoration: BoxDecoration(
-          color: status ? Colors.black : Colors.transparent,
+          color: status ? Colors.grey : Colors.transparent,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

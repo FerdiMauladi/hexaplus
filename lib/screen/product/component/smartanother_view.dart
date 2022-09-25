@@ -19,12 +19,12 @@ class _SmartAnotherViewState extends State<SmartAnotherView> {
       children: [
         SizedBox(
           width: double.infinity,
-          height: 600,
+          height: 550,
           child: Stack(
             children: [
               Container(
                 width: double.infinity,
-                height: 600,
+                height: 550,
                 color: Colors.white,
               ),
               SizedBox(
@@ -102,22 +102,25 @@ class _SmartAnotherViewState extends State<SmartAnotherView> {
         ),
         Container(
           width: double.infinity,
-          height: MediaQuery.of(context).size.height * 0.2,
+          height: 100,
           decoration: const BoxDecoration(
             color: Colors.white,
           ),
           child: Container(
-            alignment: Alignment.centerLeft,
+            alignment: Alignment.bottomLeft,
             padding: const EdgeInsets.only(
               left: 15,
               right: 15,
+              top: 10,
+              bottom: 10,
             ),
             margin: EdgeInsets.only(
               left: MediaQuery.of(context).size.width * 0.05,
-              top: MediaQuery.of(context).size.height * 0.07,
-              bottom: MediaQuery.of(context).size.height * 0.07,
+              top: 30,
+              bottom: 30,
             ),
             decoration: const BoxDecoration(
+              color: Colors.white,
               border: Border(
                 left: BorderSide(
                   width: 5,
@@ -178,7 +181,7 @@ class _SmartAnotherViewState extends State<SmartAnotherView> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'BARDI Indoor Smart CCTV',
+                                  'Bardi Smart Pet Feeder',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
