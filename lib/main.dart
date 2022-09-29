@@ -21,6 +21,7 @@ class HexaPlus extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Yorkten',
+          scaffoldBackgroundColor: Colors.white,
         ),
         initialRoute: HomeScreen.route,
         routes: {

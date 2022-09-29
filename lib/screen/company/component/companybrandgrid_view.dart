@@ -15,13 +15,18 @@ class CompanyBrandGridView extends StatelessWidget {
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: MediaQuery.of(context).size.width < 400 ? 2 : 3,
-          crossAxisSpacing: 15.0,
+          crossAxisCount: MediaQuery.of(context).size.width < 600 ? 2 : 3,
+          crossAxisSpacing: MediaQuery.of(context).size.width < 900
+              ? MediaQuery.of(context).size.width < 600
+                  ? 15.0
+                  : 45.0
+              : 85.0,
           mainAxisSpacing: 15.0,
         ),
         itemCount: dataCompanyBrandGrid.length,
         itemBuilder: (context, index) {
           return Container(
+            alignment: Alignment.center,
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,

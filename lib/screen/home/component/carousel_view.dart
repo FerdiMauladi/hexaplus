@@ -20,14 +20,16 @@ class _CarouselViewState extends State<CarouselView> {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return SizedBox(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height * 1,
+      height: width < 600 ? height * 0.8 : height * 1,
       child: Stack(
         children: [
           SizedBox(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height * 1,
+            height: width < 600 ? height * 0.8 : height * 1,
             child: CarouselSlider.builder(
               itemCount: dataView.length,
               itemBuilder: (context, index, realIndex) {

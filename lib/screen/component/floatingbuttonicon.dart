@@ -15,24 +15,12 @@ class FloatingButtonIcon extends StatelessWidget {
       ),
       child: FloatingActionButton.extended(
         onPressed: () {},
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(15.0),
-          ),
-        ),
+        shape: const CircleBorder(),
         backgroundColor: Colors.green,
-        label: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              margin: const EdgeInsets.only(left: 5.0),
-              child: Icon(
-                Icons.whatsapp_outlined,
-                color: Colors.white,
-                size: MediaQuery.of(context).size.width < 400 ? 22 : 25,
-              ),
-            ),
-          ],
+        label: const Icon(
+          Icons.whatsapp_outlined,
+          color: Colors.white,
+          size: 30,
         ),
       ),
     );

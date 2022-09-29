@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/gestures.dart';
 
+import '../../model/company_grid_model.dart';
 import '../component/floatingbutton.dart';
 import '../component/footer.dart';
 import '../component/header.dart';
@@ -69,45 +70,77 @@ class _ProductWebScreenState extends State<ProductWebScreen> {
                   SmartAnotherView(),
                   Container(
                     width: double.infinity,
-                    height: MediaQuery.of(context).size.height * 0.5,
                     decoration: const BoxDecoration(
                       color: Colors.white,
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 35,
-                          padding: const EdgeInsets.only(
-                            left: 15,
-                            right: 15,
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      height: 35,
+                      padding: const EdgeInsets.only(
+                        left: 15,
+                        right: 15,
+                      ),
+                      margin: EdgeInsets.only(
+                        left: MediaQuery.of(context).size.width * 0.15,
+                        top: 80,
+                        bottom: 80,
+                      ),
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          left: BorderSide(
+                            width: 5,
+                            color: Colors.orange,
                           ),
-                          margin: EdgeInsets.only(
-                            left: MediaQuery.of(context).size.width * 0.15,
-                            top: MediaQuery.of(context).size.height * 0.1,
-                            bottom: MediaQuery.of(context).size.height * 0.1,
-                          ),
-                          decoration: const BoxDecoration(
-                            border: Border(
-                              left: BorderSide(
-                                width: 5,
-                                color: Colors.orange,
+                        ),
+                      ),
+                      child: Text(
+                        'Jelajahi Merek',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: MediaQuery.of(context).size.width < 600
+                              ? 18
+                              : MediaQuery.of(context).size.width < 1400
+                                  ? 22
+                                  : 28,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 50.0,
+                      right: 50.0,
+                      top: 25.0,
+                      bottom: 25.0,
+                    ),
+                    child: GridView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount:
+                            MediaQuery.of(context).size.width < 600 ? 2 : 4,
+                        crossAxisSpacing:
+                            MediaQuery.of(context).size.width < 900
+                                ? MediaQuery.of(context).size.width < 600
+                                    ? 15.0
+                                    : 45.0
+                                : 85.0,
+                        mainAxisSpacing: 15.0,
+                      ),
+                      itemCount: dataCompanyBrandGrid.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(
+                                dataCompanyBrandGrid[index].image!,
                               ),
                             ),
                           ),
-                          child: Text(
-                            'Jelajahi Merek',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: MediaQuery.of(context).size.width < 600
-                                  ? 18
-                                  : MediaQuery.of(context).size.width < 1400
-                                      ? 22
-                                      : 28,
-                            ),
-                          ),
-                        ),
-                      ],
+                        );
+                      },
                     ),
                   ),
                   Footer(),

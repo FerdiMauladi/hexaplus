@@ -8,7 +8,7 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 200,
+      height: MediaQuery.of(context).size.width >= 500 ? 200 : 350,
       padding: EdgeInsets.zero,
       decoration: BoxDecoration(
         color: Colors.grey.shade800,
@@ -22,26 +22,103 @@ class Footer extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  width: 100,
-                  height: 100,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    image: DecorationImage(
-                      fit: BoxFit.contain,
-                      image: AssetImage(
-                        'assets/logo/smartwithus.png',
+            if (MediaQuery.of(context).size.width >= 500)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      image: DecorationImage(
+                        fit: BoxFit.contain,
+                        image: AssetImage(
+                          'assets/logo/smartwithus.png',
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Row(
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Row(
+                        children: [
+                          GestureDetector(
+                            child: const Text(
+                              'FAQ',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                          const Text(
+                            '  |  ',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          GestureDetector(
+                            child: const Text(
+                              'Kontak Kami',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              FontAwesomeIcons.instagram,
+                              color: Colors.white,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              FontAwesomeIcons.tiktok,
+                              color: Colors.white,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              FontAwesomeIcons.facebook,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            if (MediaQuery.of(context).size.width < 500)
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      image: DecorationImage(
+                        fit: BoxFit.contain,
+                        image: AssetImage(
+                          'assets/logo/smartwithus.png',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 10.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         GestureDetector(
                           child: const Text(
@@ -51,23 +128,31 @@ class Footer extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const Text(
-                          '  |  ',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                        GestureDetector(
-                          child: const Text(
-                            'Kontak Kami',
-                            style: TextStyle(
-                              color: Colors.white,
+                        Container(
+                          margin: const EdgeInsets.only(top: 10.0),
+                          child: GestureDetector(
+                            child: const Text(
+                              'Kontak Kami',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 10.0),
+                          child: Divider(
+                            color: Colors.white,
+                            thickness: 3,
+                            endIndent: MediaQuery.of(context).size.width * 0.75,
+                          ),
+                        )
                       ],
                     ),
-                    Row(
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 10.0),
+                    child: Row(
                       children: [
                         IconButton(
                           onPressed: () {},
@@ -92,10 +177,9 @@ class Footer extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ],
-                ),
-              ],
-            ),
+                  ),
+                ],
+              ),
             Container(
               height: 50,
               width: double.infinity,

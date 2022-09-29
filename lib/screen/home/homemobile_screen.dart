@@ -17,9 +17,9 @@ class HomeMobileScreen extends StatelessWidget {
       drawer: const DrawerScreen(),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey.shade800,
         iconTheme: const IconThemeData(
-          color: Colors.grey,
+          color: Colors.white,
         ),
         actions: [
           GestureDetector(
@@ -29,6 +29,9 @@ class HomeMobileScreen extends StatelessWidget {
             child: Container(
               width: 120,
               height: 100,
+              margin: const EdgeInsets.only(
+                right: 15,
+              ),
               decoration: const BoxDecoration(
                 shape: BoxShape.rectangle,
                 image: DecorationImage(

@@ -4,6 +4,7 @@ import '../component/drawer.dart';
 import '../component/floatingbutton.dart';
 import '../component/footer.dart';
 import '../home/home_screen.dart';
+import 'component/smartcctv_view.dart';
 
 class ProductMobileScreen extends StatelessWidget {
   const ProductMobileScreen({Key? key}) : super(key: key);
@@ -13,9 +14,9 @@ class ProductMobileScreen extends StatelessWidget {
       drawer: const DrawerScreen(),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey.shade800,
         iconTheme: const IconThemeData(
-          color: Colors.grey,
+          color: Colors.white,
         ),
         actions: [
           GestureDetector(
@@ -25,6 +26,9 @@ class ProductMobileScreen extends StatelessWidget {
             child: Container(
               width: 120,
               height: 100,
+              margin: const EdgeInsets.only(
+                right: 15,
+              ),
               decoration: const BoxDecoration(
                 shape: BoxShape.rectangle,
                 image: DecorationImage(
@@ -40,6 +44,7 @@ class ProductMobileScreen extends StatelessWidget {
       ),
       body: ListView(
         children: const [
+          SmartcctvView(),
           Footer(),
         ],
       ),
