@@ -12,9 +12,10 @@ class SmartcctvView extends StatefulWidget {
 
 class _SmartcctvViewState extends State<SmartcctvView> {
   CarouselController carouselController = CarouselController();
+  CarouselController carouselProductController = CarouselController();
 
   int _current = 0;
-  int _currentProduct = 1;
+  int _currentProduct = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -120,15 +121,20 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Container(
-                                padding: EdgeInsets.zero,
-                                alignment: Alignment.centerRight,
-                                width: width * 0.2,
-                                height: 200,
-                                child: Icon(
-                                  Icons.arrow_back_ios_new_rounded,
-                                  size: width * 0.15,
-                                  color: Colors.black54,
+                              GestureDetector(
+                                onTap: () {
+                                  carouselController.previousPage();
+                                },
+                                child: Container(
+                                  padding: EdgeInsets.zero,
+                                  alignment: Alignment.centerRight,
+                                  width: width * 0.2,
+                                  height: 200,
+                                  child: Icon(
+                                    Icons.arrow_back_ios_new_rounded,
+                                    size: width * 0.15,
+                                    color: Colors.black54,
+                                  ),
                                 ),
                               ),
                               Container(
@@ -141,6 +147,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                   width: width < 500 ? 300 : 400,
                                   height: width < 500 ? 400 : 440,
                                   child: CarouselSlider.builder(
+                                    carouselController: carouselController,
                                     itemCount: listSmartCCTV.length,
                                     itemBuilder: (context, index, realIndex) {
                                       return Container(
@@ -185,6 +192,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                       onPageChanged: (index, reason) {
                                         setState(() {
                                           _current = index;
+                                          _currentProduct = 0;
                                         });
                                       },
                                       initialPage: _current,
@@ -192,15 +200,20 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                   ),
                                 ),
                               ),
-                              Container(
-                                padding: EdgeInsets.zero,
-                                alignment: Alignment.centerLeft,
-                                width: width * 0.2,
-                                height: 200,
-                                child: Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: width * 0.15,
-                                  color: Colors.black54,
+                              GestureDetector(
+                                onTap: () {
+                                  carouselController.nextPage();
+                                },
+                                child: Container(
+                                  padding: EdgeInsets.zero,
+                                  alignment: Alignment.centerLeft,
+                                  width: width * 0.2,
+                                  height: 200,
+                                  child: Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: width * 0.15,
+                                    color: Colors.black54,
+                                  ),
                                 ),
                               ),
                             ],
@@ -210,62 +223,70 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _current = 0;
-                                });
-                              },
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Image.asset(
-                                    'produk/cctv/indoor/bardiIndoor.png',
-                                    fit: BoxFit.contain,
-                                    alignment: Alignment.bottomCenter,
-                                    width: width * 0.5,
-                                    height: 500,
-                                  ),
-                                  Container(
-                                    margin: const EdgeInsets.only(top: 5),
-                                    child: const Text(
-                                      'Indoor Smart CCTV',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 24,
+                            MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    _current = 0;
+                                    _currentProduct = 0;
+                                  });
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Image.asset(
+                                      'produk/cctv/indoor/bardiIndoor.png',
+                                      fit: BoxFit.contain,
+                                      alignment: Alignment.bottomCenter,
+                                      width: width * 0.5,
+                                      height: 500,
+                                    ),
+                                    Container(
+                                      margin: const EdgeInsets.only(top: 5),
+                                      child: const Text(
+                                        'Indoor Smart CCTV',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 24,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _current = 1;
-                                });
-                              },
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Image.asset(
-                                    'produk/cctv/outdoor/onassisOutdoor.png',
-                                    fit: BoxFit.cover,
-                                    alignment: Alignment.bottomCenter,
-                                    width: width * 0.5,
-                                    height: 620,
-                                  ),
-                                  Container(
-                                    margin: const EdgeInsets.only(top: 5),
-                                    child: const Text(
-                                      'Outdoor Smart CCTV',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 24,
+                            MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    _current = 1;
+                                    _currentProduct = 0;
+                                  });
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Image.asset(
+                                      'produk/cctv/outdoor/onassisOutdoor.png',
+                                      fit: BoxFit.cover,
+                                      alignment: Alignment.bottomCenter,
+                                      width: width * 0.5,
+                                      height: 620,
+                                    ),
+                                    Container(
+                                      margin: const EdgeInsets.only(top: 5),
+                                      child: const Text(
+                                        'Outdoor Smart CCTV',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 24,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -345,12 +366,26 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                 width: double.infinity,
                 height: width < 800
                     ? width < 600
-                        ? width < 400
-                            ? width < 335
-                                ? 1100
-                                : 1040
-                            : 1000
-                        : 900
+                        ? width < 500
+                            ? width < 400
+                                ? width < 335
+                                    ? _current == 1
+                                        ? width < 300
+                                            ? 1265
+                                            : 1215
+                                        : 1150
+                                    : _current == 1
+                                        ? 1150
+                                        : 1100
+                                : _current == 1
+                                    ? 1100
+                                    : 1050
+                            : _current == 1
+                                ? 1050
+                                : 1000
+                        : _current == 1
+                            ? 980
+                            : 950
                     : _current == 1
                         ? 840
                         : 770,
@@ -372,6 +407,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                       ),
                       if (width < 800)
                         Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
                               margin: EdgeInsets.only(
@@ -506,15 +542,20 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                   height: width < 800 ? 400 : 450,
                   child: Row(
                     children: [
-                      Container(
-                        padding: EdgeInsets.zero,
-                        alignment: Alignment.centerRight,
-                        width: width < 800 ? width * 0.2 : width * 0.125,
-                        height: 200,
-                        child: Icon(
-                          Icons.arrow_back_ios_new_rounded,
-                          size: width * 0.15,
-                          color: Colors.black54,
+                      GestureDetector(
+                        onTap: () {
+                          carouselProductController.previousPage();
+                        },
+                        child: Container(
+                          padding: EdgeInsets.zero,
+                          alignment: Alignment.centerRight,
+                          width: width < 800 ? width * 0.2 : width * 0.125,
+                          height: 200,
+                          child: Icon(
+                            Icons.arrow_back_ios_new_rounded,
+                            size: width * 0.15,
+                            color: Colors.black54,
+                          ),
                         ),
                       ),
                       Container(
@@ -527,6 +568,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                           width: width * 0.75,
                           height: width < 800 ? 400 : 450,
                           child: CarouselSlider.builder(
+                            carouselController: carouselProductController,
                             itemCount: listProductSmartCCTV[_current].length,
                             itemBuilder: (context, index, realIndex) {
                               var listProduct =
@@ -588,15 +630,20 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                           ),
                         ),
                       ),
-                      Container(
-                        padding: EdgeInsets.zero,
-                        alignment: Alignment.centerLeft,
-                        width: width < 800 ? width * 0.2 : width * 0.125,
-                        height: 200,
-                        child: Icon(
-                          Icons.arrow_forward_ios_rounded,
-                          size: width * 0.15,
-                          color: Colors.black54,
+                      GestureDetector(
+                        onTap: () {
+                          carouselProductController.nextPage();
+                        },
+                        child: Container(
+                          padding: EdgeInsets.zero,
+                          alignment: Alignment.centerLeft,
+                          width: width < 800 ? width * 0.2 : width * 0.125,
+                          height: 200,
+                          child: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            size: width * 0.15,
+                            color: Colors.black54,
+                          ),
                         ),
                       ),
                     ],

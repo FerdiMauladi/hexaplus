@@ -1,8 +1,10 @@
 class CompanyGridModel {
   String? image;
+  String? nama;
 
   CompanyGridModel({
     this.image,
+    this.nama,
   });
 }
 
@@ -33,5 +35,20 @@ List<CompanyGridModel> dataCompanyBrandGrid = [
   ),
   CompanyGridModel(
     image: 'assets/logo/elldoda.png',
+  ),
+];
+
+List<CompanyGridModel> dataProductBrandGrid = [
+  CompanyGridModel(
+    image: 'assets/logo/bardi.png',
+    nama: 'BARDI',
+  ),
+  CompanyGridModel(
+    image: 'assets/logo/onassis.png',
+    nama: 'ONASSIS',
+  ),
+  CompanyGridModel(
+    image: 'assets/logo/ezviz.png',
+    nama: 'EZVIZ',
   ),
 ];

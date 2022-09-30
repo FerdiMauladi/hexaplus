@@ -4,7 +4,15 @@ import '../component/drawer.dart';
 import '../component/floatingbutton.dart';
 import '../component/footer.dart';
 import '../home/home_screen.dart';
+import 'component/jelajahimerek.dart';
+import 'component/kategoriproduk.dart';
+import 'component/merek.dart';
+import 'component/ourproduct_view.dart';
+import 'component/smartanother_view.dart';
 import 'component/smartcctv_view.dart';
+import 'component/smartdoorlock_view.dart';
+import 'component/smartlight_view.dart';
+import 'component/whitespace.dart';
 
 class ProductMobileScreen extends StatelessWidget {
   const ProductMobileScreen({Key? key}) : super(key: key);
@@ -44,7 +52,17 @@ class ProductMobileScreen extends StatelessWidget {
       ),
       body: ListView(
         children: const [
+          OurProductView(),
+          KategoriProduk(),
           SmartcctvView(),
+          WhiteSpace(),
+          SmartDoorLockView(),
+          WhiteSpace(),
+          SmartLightView(),
+          WhiteSpace(),
+          SmartAnotherView(),
+          JelajahiMerek(),
+          Merek(),
           Footer(),
         ],
       ),

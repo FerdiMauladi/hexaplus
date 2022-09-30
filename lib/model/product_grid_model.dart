@@ -31,7 +31,7 @@ List<ProductGridModel> listProductSmartIndoorCCTV = [
     nama: 'Bardi Indoor Smart CCTV',
     label: 'Bardi Indoor',
     detail:
-        'Seberapa sering anda merasa cemas setiap meninggalkan rumah? Kini anda tidak perlu khawatir lagi jika harus meninggalkan barang-barang berharga. Smart CCTV mampu memantau kondisi tempat anda 24 jam, sudah terekam otomatis, dan bisa diputar ulang kapanpun anda mau. Smart CCTV juga bisa memberikan notifikasi ketika terekam pergerakan. ',
+        'Seberapa sering anda merasa cemas setiap meninggalkan rumah? Kini anda tidak perlu khawatir lagi jika harus meninggalkan barang-barang berharga. Smart CCTV mampu memantau kondisi tempat anda 24 jam, sudah terekam otomatis, dan bisa diputar ulang kapanpun anda mau. Smart CCTV juga bisa memberikan notifikasi ketika terekam pergerakan.',
     grafikImage: 'hexa/grafikproduk.png',
   ),
   ProductGridModel(
@@ -82,4 +82,195 @@ List<ProductGridModel> listProductSmartOutdoorCCTV = [
 List<List<ProductGridModel>> listProductSmartCCTV = [
   listProductSmartIndoorCCTV,
   listProductSmartOutdoorCCTV,
+];
+
+List<ProductGridModel> listSmartDoorlock = [
+  ProductGridModel(
+    image: 'produk/doorlock/kayu/onassisk10pro.png',
+    nama: 'Pintu Kayu',
+  ),
+  ProductGridModel(
+    image: 'produk/doorlock/alumunium/onassisd65.png',
+    nama: 'Pintu Alumunium',
+  ),
+  ProductGridModel(
+    image: 'produk/doorlock/kaca/arbitGlass.png',
+    nama: 'Pintu Kaca',
+  ),
+];
+
+List<ProductGridModel> listProductPintuKayu = [
+  ProductGridModel(
+    image: 'produk/doorlock/kayu/onassisk10pro.png',
+    nama: 'Onasis K10 Pro Smart Door Lock',
+    label: 'Onasis K10 Pro Wood',
+    detail:
+        'Seberapa sering anda lupa menyimpan kunci rumah? Merek Bardi smart door lock membuat anda tidak harus lagi membawa kunci rumah dan bisa diakses dengan menggunakan password ataupun sidik jari. Anda pun tidak perlu khawatir rumah atau kantor anda dibobol, karena dengan teknologi yang lebih canggih kunci pintar ini memiliki tingkat keamanan yang jauh lebih tinggi dan eksklusif.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+  ProductGridModel(
+    image: 'produk/doorlock/kayu/bardiLock.png',
+    nama: 'Bardi Smart Door Lock',
+    label: 'Bardi Wood',
+    detail:
+        'Apakah anda sering kerepotan membuat janji temu dengan anggota keluarga atau karyawan untuk memberikan kunci masuk? Kini permasalahan itu bisa diatasi dengan smart door lock. Hanya melalui password anda bisa membuka pintu dengan mudah. Dirancang dengan teknologi yang canggih, smart door lock memiliki tingkat keamanan yang lebih tinggi dibanding gagang pintu konvensional.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+  ProductGridModel(
+    image: 'produk/doorlock/kayu/arbitLock.png',
+    nama: 'Arbit Smart Door Lock',
+    label: 'Arbit Wood',
+    detail:
+        'Hal yang paling menyebalkan adalah menunggu. 1 rumah yang dihuni oleh banyak orang sering kali membuat satu sama lainnya menunggu untuk mendapatkan kunci masuk. Namun kunci pintar kini hadir membantu anda memiliki kehidupan yang lebih mudah. Anda tidak harus menunggu atau menduplikat kunci agar anggota keluarga atau kerabat anda bisa masuk, sebab hanya melalui password dan fitur pembuka kunci lainnya anda bisa membuka pintu rumah dengan mudah.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+];
+
+List<ProductGridModel> listProductPintuAlumunium = [
+  ProductGridModel(
+    image: 'produk/doorlock/alumunium/onassisd65.png',
+    nama: 'Onasis D65 Smart Door Lock',
+    label: 'Onassis D65 Alumunium',
+    detail:
+        'Seberapa sering anda lupa menyimpan kunci rumah? Merek Bardi smart door lock membuat anda tidak harus lagi membawa kunci rumah dan bisa diakses dengan menggunakan password ataupun sidik jari. Anda pun tidak perlu khawatir rumah atau kantor anda dibobol, karena dengan teknologi yang lebih canggih kunci pintar ini memiliki tingkat keamanan yang jauh lebih tinggi dan eksklusif.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+];
+
+List<ProductGridModel> listProductPintuKaca = [
+  ProductGridModel(
+    image: 'produk/doorlock/kaca/arbitGlass.png',
+    nama: 'Arbit Smart Door Lock',
+    label: 'Arbit Glass',
+    detail:
+        'Seberapa sering anda lupa menyimpan kunci rumah? Merek Bardi smart door lock membuat anda tidak harus lagi membawa kunci rumah dan bisa diakses dengan menggunakan password ataupun sidik jari. Anda pun tidak perlu khawatir rumah atau kantor anda dibobol, karena dengan teknologi yang lebih canggih kunci pintar ini memiliki tingkat keamanan yang jauh lebih tinggi dan eksklusif.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+  ProductGridModel(
+    image: 'produk/doorlock/kaca/onassisD81.png',
+    nama: 'Onassis Smart Door Lock',
+    label: 'Onassis D81 Glass',
+    detail:
+        'Apakah anda sering kerepotan membuat janji temu dengan anggota keluarga atau karyawan untuk memberikan kunci masuk? Kini permasalahan itu bisa diatasi dengan smart door lock. Hanya melalui password anda bisa membuka pintu dengan mudah. Dirancang dengan teknologi yang canggih, smart door lock memiliki tingkat keamanan yang lebih tinggi dibanding gagang pintu konvensional.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+];
+
+List<List<ProductGridModel>> listProductSmartDoorlock = [
+  listProductPintuKayu,
+  listProductPintuAlumunium,
+  listProductPintuKaca,
+];
+
+List<ProductGridModel> listSmartBulb = [
+  ProductGridModel(
+    image: 'produk/light/bulb/arbitBulb.png',
+    nama: 'Smart Light Bulb',
+  ),
+  ProductGridModel(
+    image: 'produk/light/strip/arbitStrip.png',
+    nama: 'Smart LED Strip',
+  ),
+];
+
+List<ProductGridModel> listProductSmartBulbLight = [
+  ProductGridModel(
+    image: 'produk/light/bulb/arbitBulb.png',
+    nama: 'Arbit Smart Light Bulb',
+    label: 'Arbit Smart Light Bulb',
+    detail:
+        'Smart Bulb menjawab kebutuhan anda untuk menjadwalkan lampu menyala dan mati otomatis. Hanya dengan menggunakan handphone, anda bisa mengaturnya sesuka hati tanpa melalui saklar. Ezviz merupakan produk dari Hikvision yang sudah teruji kualitas dan ketahanannya. Melalui smart bulb anda juga bisa menghemat biaya tagihan listrik yang bisa dialokasikan untuk kebutuhan lain.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+  ProductGridModel(
+    image: 'produk/light/bulb/bardiBulb.png',
+    nama: 'Bardi Smart Light Bulb',
+    label: 'Bardi Smart Light Bulb',
+    detail:
+        'Lampu adalah benda essensial untuk menerangi ruangan yang membuat anda bisa melakukan banyak pekerjaan. Namun seringkali kita repot dengan menyala dan mematikan lampu pada jam-jam tertentu. Kini dengan lampu pintar, anda bisa menjadwalkan kapan lampu anda nyala dan mati otomatis. Dipenuhi dengan 12 juta warna, anda bisa memilih warna sesuka hati. Kini tidak perlu lagi khawatir menyalakan lampu ketika berada diluar rumah karena bisa diatur dari manapun anda berada.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+  ProductGridModel(
+    image: 'produk/light/bulb/ezvizBulb.png',
+    nama: 'Ezviz Smart Light Bulb',
+    label: 'Ezviz Smart Light Bulb',
+    detail:
+        'Smart Bulb menjawab kebutuhan anda untuk menjadwalkan lampu menyala dan mati otomatis. Hanya dengan menggunakan handphone, anda bisa mengaturnya sesuka hati tanpa melalui saklar. Ezviz merupakan produk dari Hikvision yang sudah teruji kualitas dan ketahanannya. Melalui smart bulb anda juga bisa menghemat biaya tagihan listrik yang bisa dialokasikan untuk kebutuhan lain.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+  ProductGridModel(
+    image: 'produk/light/bulb/onassisBulb.png',
+    nama: 'Onassis Smart Light Bulb',
+    label: 'Onassis Smart Light Bulb',
+    detail:
+        'Smart bulb memiliki kecanggihan dalam memberikan estetika pada hunian anda, mengubah warna sesuai keinginan hingga 12 juta warna, dan lebih hemat biaya listrik. Semuanya bisa anda kontrol melalui smartphone. Dapatkan kemudahan dengan menggunakan lampu pintar ini.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+];
+
+List<ProductGridModel> listProductSmartLEDStrip = [
+  ProductGridModel(
+    image: 'produk/light/strip/arbitStrip.png',
+    nama: 'Arbit Smart LED Strip',
+    label: 'Arbit Smart LED Strip',
+    detail:
+        'LED Strip terbukti mampu menambah estetika pencahayaan ruangan anda. Direkomendasikan untuk di dalam ruangan, LED Strip bisa dipasang pada ruangan manapun yang anda inginkan. Tidak hanya di dinding, namun bisa dipasang di sudut-sudut plafon, backdrop televisi untuk mendapatkan efek backlight, dan pencahayaan tangga. Pengaturan pencahayaannya pun bisa diatur hanya melalui smartphone anda.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+  ProductGridModel(
+    image: 'produk/light/strip/onassisStrip.png',
+    nama: 'Onassis Smart LED Strip',
+    label: 'Onassis Smart LED Strip',
+    detail:
+        'Aesthetic menjadi kata yang populer belakangan ini. LED strip mampu membuat ruangan anda menjadi lebih aesthetic namun dengan watt yang ringan. LED strip bisa digunakan sebagai downlight di plafon, langit-langit ruangan, dan sudah didukung dengan 16 juta warna RGB.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+  ProductGridModel(
+    image: 'produk/light/strip/bardiStrip.png',
+    nama: 'Bardi Smart LED Strip',
+    label: 'Bardi Smart LED Strip',
+    detail:
+        'LED Strip terbukti mampu menambah estetika pencahayaan ruangan anda. Direkomendasikan untuk di dalam ruangan, LED Strip bisa dipasang pada ruangan manapun yang anda inginkan. Tidak hanya di dinding, namun bisa dipasang di sudut-sudut plafon, backdrop televisi untuk mendapatkan efek backlight, dan pencahayaan tangga. Pengaturan pencahayaannya pun bisa diatur hanya melalui smartphone anda.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+];
+
+List<List<ProductGridModel>> listProductSmartLight = [
+  listProductSmartBulbLight,
+  listProductSmartLEDStrip,
+];
+
+List<ProductGridModel> listProductSmartAnother = [
+  ProductGridModel(
+    image: 'produk/lainnya/bardiPetFeeder.png',
+    nama: 'Bardi Smart Pet Feeder',
+    label: 'Bardi Smart Pet Feeder',
+    detail:
+        'Apakah anda ingin memiliki hewan peliharaan tapi tidak punya waktu untuk memberinya makan? Smart pet feeder solusinya. Dengan kapasitas makanan 6 liter, anda tidak perlu takut melewatkan jam makan hewan kesayangan anda. Tinggal mengatur jadwal makannya, maka makanan akan tersaji pada wadah yang tersedia tepat waktu.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+  ProductGridModel(
+    image: 'produk/lainnya/bardiWallSwitch1.png',
+    nama: 'Bardi Smart Wall Switch',
+    label: 'Bardi Smart Wall Switch',
+    detail:
+        'Smart wall switch membantu anda menyala dan mematikan lampu melalui aplikasi. Dengan tampilan yang lebih minimalis, smart wall switch akan membuat hunian anda menjadi lebih pintar. Pengaturan jadwal pun bisa dilakukan darimana pun anda berada.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+  ProductGridModel(
+    image: 'produk/lainnya/bardiFishFeeder.png',
+    nama: 'Bardi Smart Fish Feeder',
+    label: 'Bardi Smart Fish Feeder',
+    detail:
+        'Jika sering melewatkan waktu memberi makan ikan anda, smart fish feeder adalah jawabannya. Anda tidak perlu lagi membuat pengingat dihandphone atau memberikan makan secara manual. Melalui smart fish feeder anda hanya perlu mengatur jam dan porsi makan yang akan diberikan.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
+  ProductGridModel(
+    image: 'produk/lainnya/onassisSmartWallSwitch1.png',
+    nama: 'Onassis Smart Wall Switch',
+    label: 'Onassis Smart Wall Switch',
+    detail:
+        'Smart wall switch membantu anda menyala dan mematikan lampu melalui aplikasi. Dengan tampilan yang lebih minimalis, smart wall switch akan membuat hunian anda menjadi lebih pintar. Pengaturan jadwal pun bisa dilakukan darimana pun anda berada.',
+    grafikImage: 'hexa/grafikproduk.png',
+  ),
 ];

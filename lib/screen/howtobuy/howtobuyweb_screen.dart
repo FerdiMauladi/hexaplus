@@ -1,10 +1,16 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../company/company_screen.dart';
 import '../component/floatingbutton.dart';
 import '../component/footer.dart';
 import '../component/header.dart';
+import '../component/sliverappbar.dart';
+import '../component/sliverheader.dart';
+import '../home/home_screen.dart';
+import '../product/product_screen.dart';
 import 'component/howtobuy_view.dart';
+import 'howtobuy_screen.dart';
 
 class HowToBuyWebScreen extends StatefulWidget {
   const HowToBuyWebScreen({Key? key}) : super(key: key);
@@ -14,55 +20,31 @@ class HowToBuyWebScreen extends StatefulWidget {
 }
 
 class _HowToBuyWebScreenState extends State<HowToBuyWebScreen> {
-  ScrollController scrollController = ScrollController();
-  bool status = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          NotificationListener(
-            onNotification: (ScrollNotification notification) {
-              if (notification is UserScrollNotification) {
-                if (scrollController.hasClients &&
-                    scrollController.offset > 0) {
-                  setState(() {
-                    status = true;
-                  });
-                }
-                if (notification.metrics.atEdge &&
-                    notification.metrics.pixels == 0) {
-                  setState(() {
-                    status = false;
-                  });
-                }
-              }
-              return false;
-            },
-            child: ScrollConfiguration(
-              behavior: ScrollConfiguration.of(context).copyWith(
-                dragDevices: {
-                  PointerDeviceKind.touch,
-                  PointerDeviceKind.mouse,
-                },
-              ),
-              child: ListView(
-                controller: scrollController,
-                scrollDirection: Axis.vertical,
-                children: const [
-                  HowToBuyView(),
-                  Footer(),
-                ],
-              ),
+          ScrollConfiguration(
+            behavior: ScrollConfiguration.of(context).copyWith(
+              dragDevices: {
+                PointerDeviceKind.touch,
+                PointerDeviceKind.mouse,
+              },
             ),
-          ),
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: Header(
-              status: status,
+            child: CustomScrollView(
+              shrinkWrap: true,
+              slivers: [
+                const SliverAppbarCustom(),
+                SliverList(
+                  delegate: SliverChildListDelegate(
+                    [
+                      const HowToBuyView(),
+                      const Footer(),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
           const FloatingButton(),

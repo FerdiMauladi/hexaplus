@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
+import '../../../model/product_grid_model.dart';
+
 class SmartAnotherView extends StatefulWidget {
   const SmartAnotherView({Key? key}) : super(key: key);
 
@@ -10,34 +12,38 @@ class SmartAnotherView extends StatefulWidget {
 
 class _SmartAnotherViewState extends State<SmartAnotherView> {
   CarouselController carouselController = CarouselController();
+  CarouselController carouselProductController = CarouselController();
 
-  int _current = 1;
+  int _current = 0;
+  int _currentProduct = 0;
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return Column(
       children: [
         SizedBox(
           width: double.infinity,
-          height: 550,
+          height: 580,
           child: Stack(
             children: [
               Container(
                 width: double.infinity,
-                height: 550,
+                height: 580,
                 color: Colors.white,
               ),
               SizedBox(
                 width: double.infinity,
-                height: 550,
+                height: width < 350 ? 450 : 550,
                 child: Stack(
                   children: [
                     Container(
                       width: double.infinity,
-                      height: 550,
+                      height: width < 350 ? 450 : 550,
                       decoration: const BoxDecoration(
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
+                          alignment: Alignment.bottomRight,
                           fit: BoxFit.cover,
                           image: AssetImage(
                             'assets/foto/smartanother.png',
@@ -55,9 +61,9 @@ class _SmartAnotherViewState extends State<SmartAnotherView> {
                             'Produk Smart Home Lainnya',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: MediaQuery.of(context).size.width < 600
+                              fontSize: width < 600
                                   ? 45
-                                  : MediaQuery.of(context).size.width < 1400
+                                  : width < 1400
                                       ? 55
                                       : 65,
                               shadows: const <Shadow>[
@@ -75,10 +81,9 @@ class _SmartAnotherViewState extends State<SmartAnotherView> {
                               'Hunian lebih aman dan efisien dengan teknologi',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: MediaQuery.of(context).size.width <
-                                        600
+                                fontSize: width < 600
                                     ? 24
-                                    : MediaQuery.of(context).size.width < 1400
+                                    : width < 1400
                                         ? 28
                                         : 35,
                                 shadows: const <Shadow>[
@@ -142,148 +147,228 @@ class _SmartAnotherViewState extends State<SmartAnotherView> {
           ),
         ),
         SizedBox(
-          width: MediaQuery.of(context).size.width,
-          height: 700,
+          width: width,
           child: Stack(
             children: [
               Container(
                 width: double.infinity,
-                height: 700,
+                height: width < 800
+                    ? width < 600
+                        ? width < 500
+                            ? width < 400
+                                ? width < 335
+                                    ? 1150
+                                    : 1100
+                                : 1050
+                            : 1000
+                        : 950
+                    : 770,
                 color: Colors.white,
               ),
               Positioned(
+                top: 250,
                 left: 0,
                 right: 0,
                 bottom: 0,
                 child: SizedBox(
                   width: double.infinity,
-                  height: 450,
                   child: Stack(
                     children: [
                       Container(
                         width: double.infinity,
-                        height: 450,
+                        height: double.infinity,
                         color: Colors.deepOrangeAccent,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.5,
-                            padding: const EdgeInsets.only(
-                              top: 40.0,
-                              right: 150.0,
-                              left: 20.0,
-                              bottom: 40.0,
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  'Bardi Smart Pet Feeder',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                                Container(
-                                  margin: const EdgeInsets.only(top: 10),
-                                  child: const Text(
-                                    'Seberapa sering anda merasa cemas setiap meninggalkan rumah ? Kini anda tidak perlu khawatir lagi jika harus meninggalkan barang-barang berharga. Smart CCTV mampu memantau kondisi tempat anda 24 jam, sudah terekam otomatis, dan bisa diputar ulang kapanpun anda mau. Smart CCTV juga bisa memberikan notifikasi ketika terekam pergerakan.',
-                                    style: TextStyle(
+                      if (width < 800)
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(
+                                top: width < 365 ? 130.0 : 150.0,
+                              ),
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    listProductSmartAnother[_current].nama!,
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 18,
                                     ),
-                                    textAlign: TextAlign.justify,
                                   ),
-                                ),
-                              ],
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 10),
+                                    child: Text(
+                                      listProductSmartAnother[_current].detail!,
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                      ),
+                                      textAlign: TextAlign.start,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.5,
-                            padding: const EdgeInsets.only(
-                              top: 25.0,
-                              right: 20.0,
-                              left: 10.0,
-                              bottom: 25.0,
+                            Container(
+                              padding: const EdgeInsets.all(
+                                10.0,
+                              ),
+                              child: Image.asset(
+                                listProductSmartAnother[_current].grafikImage!,
+                                fit:
+                                    width < 360 ? BoxFit.contain : BoxFit.cover,
+                                height: 280,
+                              ),
                             ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Image.asset(
-                                  'hexa/grafikproduk.png',
-                                  fit: BoxFit.contain,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.25,
-                                  height: 280,
-                                ),
-                              ],
+                          ],
+                        ),
+                      if (width >= 800)
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              width: width * 0.5,
+                              padding: EdgeInsets.only(
+                                top: 30.0,
+                                right: width < 1000
+                                    ? width < 900
+                                        ? width < 800
+                                            ? 25.0
+                                            : 50.0
+                                        : 80.0
+                                    : 150.0,
+                                left: 20.0,
+                                bottom: 30.0,
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    listProductSmartAnother[_current].nama!,
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 10),
+                                    child: Text(
+                                      listProductSmartAnother[_current].detail!,
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                      ),
+                                      textAlign: TextAlign.start,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
+                            Container(
+                              width: width * 0.5,
+                              padding: const EdgeInsets.only(
+                                top: 25.0,
+                                right: 20.0,
+                                left: 10.0,
+                                bottom: 25.0,
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Image.asset(
+                                    listProductSmartAnother[_current]
+                                        .grafikImage!,
+                                    fit: BoxFit.cover,
+                                    width: 300,
+                                    height: 250,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                     ],
                   ),
                 ),
               ),
               Positioned(
-                top: 25,
+                top: 0,
                 left: 0,
                 right: 0,
                 child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  height: 380,
+                  width: width,
+                  height: width < 800 ? 400 : 450,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.zero,
-                            alignment: Alignment.topRight,
-                            width: MediaQuery.of(context).size.width * 0.125,
-                            height: 200,
-                            child: const Icon(
-                              Icons.arrow_back_ios_new_rounded,
-                              size: 150,
-                              color: Colors.black54,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        padding: EdgeInsets.zero,
-                        width: MediaQuery.of(context).size.width * 0.75,
-                        height: 380,
+                      GestureDetector(
+                        onTap: () {
+                          carouselController.previousPage();
+                        },
                         child: Container(
                           padding: EdgeInsets.zero,
-                          width: MediaQuery.of(context).size.width * 0.75,
-                          height: 380,
+                          alignment: Alignment.centerRight,
+                          width: width < 800 ? width * 0.2 : width * 0.125,
+                          height: 200,
+                          child: Icon(
+                            Icons.arrow_back_ios_new_rounded,
+                            size: width * 0.15,
+                            color: Colors.black54,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        padding: EdgeInsets.zero,
+                        width: width < 800 ? width * 0.6 : width * 0.75,
+                        height: width < 800 ? 400 : 450,
+                        child: Container(
+                          padding: EdgeInsets.zero,
+                          width: width * 0.75,
+                          height: width < 800 ? 400 : 450,
                           child: CarouselSlider.builder(
-                            itemCount: 3,
+                            carouselController: carouselController,
+                            itemCount: listProductSmartAnother.length,
                             itemBuilder: (context, index, realIndex) {
+                              var listProduct = listProductSmartAnother[index];
                               return Container(
-                                width: MediaQuery.of(context).size.width * 0.25,
-                                height: 380,
+                                height: width < 800 ? 400 : 450,
                                 padding: EdgeInsets.zero,
                                 child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Image.asset(
-                                      'produk/lainnya/bardiPetFeeder.png',
-                                      fit: BoxFit.contain,
-                                      width: MediaQuery.of(context).size.width *
-                                          0.3,
-                                      height: 300,
+                                      listProduct.image!,
+                                      fit: width < 400
+                                          ? BoxFit.contain
+                                          : BoxFit.cover,
+                                      width: width < 1000
+                                          ? width < 800
+                                              ? width < 500
+                                                  ? width < 350
+                                                      ? 250
+                                                      : 300
+                                                  : 350
+                                              : 300
+                                          : 400,
+                                      height: width < 1000
+                                          ? width < 800
+                                              ? width < 500
+                                                  ? width < 350
+                                                      ? 250
+                                                      : 300
+                                                  : 350
+                                              : 300
+                                          : 400,
                                     ),
-                                    const Text(
-                                      'Bardi Smart Pet Feeder',
-                                      style: TextStyle(
+                                    Text(
+                                      listProduct.label!,
+                                      style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 18,
                                       ),
@@ -293,7 +378,7 @@ class _SmartAnotherViewState extends State<SmartAnotherView> {
                               );
                             },
                             options: CarouselOptions(
-                              viewportFraction: 0.35,
+                              viewportFraction: width < 800 ? 1 : 0.35,
                               height: double.infinity,
                               onPageChanged: (index, reason) {
                                 setState(() {
@@ -308,15 +393,20 @@ class _SmartAnotherViewState extends State<SmartAnotherView> {
                           ),
                         ),
                       ),
-                      Container(
-                        padding: EdgeInsets.zero,
-                        alignment: Alignment.topLeft,
-                        width: MediaQuery.of(context).size.width * 0.11,
-                        height: 200,
-                        child: const Icon(
-                          Icons.arrow_forward_ios_rounded,
-                          size: 150,
-                          color: Colors.black54,
+                      GestureDetector(
+                        onTap: () {
+                          carouselController.nextPage();
+                        },
+                        child: Container(
+                          padding: EdgeInsets.zero,
+                          alignment: Alignment.centerLeft,
+                          width: width < 800 ? width * 0.2 : width * 0.125,
+                          height: 200,
+                          child: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            size: width * 0.15,
+                            color: Colors.black54,
+                          ),
                         ),
                       ),
                     ],

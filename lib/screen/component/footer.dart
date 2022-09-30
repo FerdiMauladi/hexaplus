@@ -26,29 +26,36 @@ class Footer extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      image: DecorationImage(
-                        fit: BoxFit.contain,
-                        image: AssetImage(
-                          'assets/logo/smartwithus.png',
+                  Column(
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 100,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.rectangle,
+                          image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: AssetImage(
+                              'assets/logo/smartwithus.png',
+                            ),
+                          ),
                         ),
                       ),
-                    ),
+                    ],
                   ),
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Row(
                         children: [
-                          GestureDetector(
-                            child: const Text(
-                              'FAQ',
-                              style: TextStyle(
-                                color: Colors.white,
+                          MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: GestureDetector(
+                              onTap: () {},
+                              child: const Text(
+                                'FAQ',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           ),
@@ -59,6 +66,7 @@ class Footer extends StatelessWidget {
                             ),
                           ),
                           GestureDetector(
+                            onTap: () {},
                             child: const Text(
                               'Kontak Kami',
                               style: TextStyle(
@@ -68,30 +76,51 @@ class Footer extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              FontAwesomeIcons.instagram,
-                              color: Colors.white,
+                      Container(
+                        margin: const EdgeInsets.only(
+                          top: 15.0,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: const Icon(
+                                  FontAwesomeIcons.instagram,
+                                  color: Colors.white,
+                                ),
+                              ),
                             ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              FontAwesomeIcons.tiktok,
-                              color: Colors.white,
+                            const SizedBox(
+                              width: 15,
                             ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              FontAwesomeIcons.facebook,
-                              color: Colors.white,
+                            MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: const Icon(
+                                  FontAwesomeIcons.tiktok,
+                                  color: Colors.white,
+                                ),
+                              ),
                             ),
-                          ),
-                        ],
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: const Icon(
+                                  FontAwesomeIcons.facebook,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),

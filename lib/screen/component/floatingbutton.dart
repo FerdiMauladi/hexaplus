@@ -16,7 +16,7 @@ class _FloatingButtonState extends State<FloatingButton> {
     return Container(
       alignment: Alignment.bottomRight,
       margin: const EdgeInsets.only(
-        bottom: 60,
+        bottom: 40,
         right: 10,
       ),
       child: MouseRegion(

@@ -5,22 +5,23 @@ import '../home/home_screen.dart';
 import '../howtobuy/howtobuy_screen.dart';
 import '../product/product_screen.dart';
 
-class Header extends StatelessWidget {
-  final bool status;
-  const Header({
-    required this.status,
+class SliverAppbarCustom extends StatelessWidget {
+  const SliverAppbarCustom({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.zero,
-      decoration: BoxDecoration(
-        color: status ? Colors.grey.shade800 : Colors.transparent,
-      ),
-      child: Column(
+    return SliverAppBar(
+      backgroundColor: Colors.grey.shade800,
+      elevation: 8,
+      shadowColor: Colors.grey,
+      automaticallyImplyLeading: false,
+      snap: true,
+      floating: true,
+      toolbarHeight: 110,
+      centerTitle: true,
+      title: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -31,9 +32,8 @@ class Header extends StatelessWidget {
                 Navigator.of(context).pushNamed(HomeScreen.route);
               },
               child: Container(
-                margin: const EdgeInsets.only(top: 15.0),
-                width: 120,
-                height: 50,
+                width: 100,
+                height: 40,
                 decoration: const BoxDecoration(
                   shape: BoxShape.rectangle,
                   image: DecorationImage(
@@ -47,7 +47,7 @@ class Header extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(top: 20.0, bottom: 15.0),
+            margin: const EdgeInsets.only(top: 13.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -9,12 +9,12 @@ class HowToBuyView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height * 1,
+      height: MediaQuery.of(context).size.height * 0.85,
       child: Stack(
         children: [
           Container(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height * 1,
+            height: MediaQuery.of(context).size.height * 0.85,
             decoration: const BoxDecoration(
               shape: BoxShape.rectangle,
               image: DecorationImage(

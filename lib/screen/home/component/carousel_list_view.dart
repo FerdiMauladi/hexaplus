@@ -113,6 +113,7 @@ class CarouselListView extends StatelessWidget {
                     textStyle: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
