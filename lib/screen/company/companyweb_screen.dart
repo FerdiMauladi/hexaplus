@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../component/floatingbutton.dart';
 import '../component/footer.dart';
 import '../component/header.dart';
+import '../component/sliverappbar.dart';
 import '../home/component/carousel_view.dart';
 import 'component/companybrandgrid_view.dart';
 import 'component/companygrid_view.dart';
@@ -27,52 +28,31 @@ class _CompanyWebScreenState extends State<CompanyWebScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          NotificationListener(
-            onNotification: (ScrollNotification notification) {
-              if (notification is UserScrollNotification) {
-                if (scrollController.hasClients &&
-                    scrollController.offset > 0) {
-                  setState(() {
-                    status = true;
-                  });
-                }
-                if (notification.metrics.atEdge &&
-                    notification.metrics.pixels == 0) {
-                  setState(() {
-                    status = false;
-                  });
-                }
-              }
-              return false;
-            },
-            child: ScrollConfiguration(
-              behavior: ScrollConfiguration.of(context).copyWith(
-                dragDevices: {
-                  PointerDeviceKind.touch,
-                  PointerDeviceKind.mouse,
-                },
-              ),
-              child: ListView(
-                controller: scrollController,
-                scrollDirection: Axis.vertical,
-                children: const [
-                  CarouselView(),
-                  CompanyTextOneView(),
-                  CompanyGridView(),
-                  CompanyTextTwoView(),
-                  OurClientView(),
-                  CompanyBrandGridView(),
-                  Footer(),
-                ],
-              ),
+          ScrollConfiguration(
+            behavior: ScrollConfiguration.of(context).copyWith(
+              dragDevices: {
+                PointerDeviceKind.touch,
+                PointerDeviceKind.mouse,
+              },
             ),
-          ),
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: Header(
-              status: status,
+            child: CustomScrollView(
+              shrinkWrap: true,
+              slivers: [
+                const SliverAppbarCustom(),
+                SliverList(
+                  delegate: SliverChildListDelegate(
+                    [
+                      const CarouselView(),
+                      const CompanyTextOneView(),
+                      const CompanyGridView(),
+                      const CompanyTextTwoView(),
+                      const OurClientView(),
+                      const CompanyBrandGridView(),
+                      const Footer(),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
           const FloatingButton(),

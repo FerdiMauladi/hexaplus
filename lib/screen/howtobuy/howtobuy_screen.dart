@@ -16,10 +16,10 @@ class HowToBuyScreen extends StatelessWidget {
       title: 'Cara Membeli',
       child: LayoutBuilder(
         builder: (context, constraints) {
-          if (constraints.maxWidth < 600) {
+          if (constraints.maxWidth < 600 && constraints.maxHeight < 950) {
             return const HowToBuyMobileScreen();
           } else if (constraints.maxWidth < 600 &&
-              (Platform.isAndroid || Platform.isIOS)) {
+              constraints.maxHeight > 950) {
             return const HowToBuyWebScreen();
           } else {
             return const HowToBuyWebScreen();

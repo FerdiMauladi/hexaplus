@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../component/drawer.dart';
-import '../component/floatingbutton.dart';
+import '../component/floatingbuttonicon.dart';
 import '../component/footer.dart';
 import '../home/home_screen.dart';
+import 'component/howtobuy_view.dart';
+import 'component/onlineshop_view.dart';
 
 class HowToBuyMobileScreen extends StatelessWidget {
   const HowToBuyMobileScreen({Key? key}) : super(key: key);
@@ -41,9 +43,16 @@ class HowToBuyMobileScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: ListView(
-        children: const [
-          Footer(),
+      body: Stack(
+        children: [
+          ListView(
+            children: const [
+              HowToBuyView(),
+              OnlineShopView(),
+              Footer(),
+            ],
+          ),
+          const FloatingButtonIcon(),
         ],
       ),
     );

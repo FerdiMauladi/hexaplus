@@ -52,3 +52,26 @@ List<CompanyGridModel> dataProductBrandGrid = [
     nama: 'EZVIZ',
   ),
 ];
+
+List<CompanyGridModel> dataOnlineShopGrid = [
+  CompanyGridModel(
+    image: 'assets/logo/tokopedia.png',
+    nama: 'https://www.tokopedia.com/hexaplus?source=universe&st=product',
+  ),
+  CompanyGridModel(
+    image: 'assets/logo/bukalapak.png',
+  ),
+  CompanyGridModel(
+    image: 'assets/logo/blibli.png',
+    nama: 'https://www.blibli.com/merchant/hexa/HEA-70128',
+  ),
+  CompanyGridModel(
+    image: 'assets/logo/lazada.png',
+    nama:
+        'https://www.lazada.co.id/shop/hexa-plus?path=index.htm&lang=id&pageTypeId=1',
+  ),
+  CompanyGridModel(
+    image: 'assets/logo/olx.png',
+    nama: 'https://www.olx.co.id/profile/89971776',
+  ),
+];

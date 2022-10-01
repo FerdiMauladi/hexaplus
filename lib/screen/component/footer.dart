@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -86,7 +87,15 @@ class Footer extends StatelessWidget {
                             MouseRegion(
                               cursor: SystemMouseCursors.click,
                               child: GestureDetector(
-                                onTap: () {},
+                                onTap: () async {
+                                  final Uri url = Uri.parse(
+                                      'https://www.instagram.com/hexaplus.bdg/');
+                                  if (await canLaunchUrl(url)) {
+                                    await launchUrl(url);
+                                  } else {
+                                    throw 'Could not launch $url';
+                                  }
+                                },
                                 child: const Icon(
                                   FontAwesomeIcons.instagram,
                                   color: Colors.white,
@@ -99,7 +108,15 @@ class Footer extends StatelessWidget {
                             MouseRegion(
                               cursor: SystemMouseCursors.click,
                               child: GestureDetector(
-                                onTap: () {},
+                                onTap: () async {
+                                  final Uri url = Uri.parse(
+                                      'https://www.tiktok.com/@hexaplus.bdg');
+                                  if (await canLaunchUrl(url)) {
+                                    await launchUrl(url);
+                                  } else {
+                                    throw 'Could not launch $url';
+                                  }
+                                },
                                 child: const Icon(
                                   FontAwesomeIcons.tiktok,
                                   color: Colors.white,
@@ -112,7 +129,15 @@ class Footer extends StatelessWidget {
                             MouseRegion(
                               cursor: SystemMouseCursors.click,
                               child: GestureDetector(
-                                onTap: () {},
+                                onTap: () async {
+                                  final Uri url = Uri.parse(
+                                      'https://www.facebook.com/hexaplusofficial/');
+                                  if (await canLaunchUrl(url)) {
+                                    await launchUrl(url);
+                                  } else {
+                                    throw 'Could not launch $url';
+                                  }
+                                },
                                 child: const Icon(
                                   FontAwesomeIcons.facebook,
                                   color: Colors.white,
@@ -150,6 +175,7 @@ class Footer extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         GestureDetector(
+                          onTap: () {},
                           child: const Text(
                             'FAQ',
                             style: TextStyle(
@@ -184,21 +210,45 @@ class Footer extends StatelessWidget {
                     child: Row(
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () async {
+                            final Uri url = Uri.parse(
+                                'https://www.instagram.com/hexaplus.bdg/');
+                            if (await canLaunchUrl(url)) {
+                              await launchUrl(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          },
                           icon: const Icon(
                             FontAwesomeIcons.instagram,
                             color: Colors.white,
                           ),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () async {
+                            final Uri url = Uri.parse(
+                                'https://www.tiktok.com/@hexaplus.bdg');
+                            if (await canLaunchUrl(url)) {
+                              await launchUrl(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          },
                           icon: const Icon(
                             FontAwesomeIcons.tiktok,
                             color: Colors.white,
                           ),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () async {
+                            final Uri url = Uri.parse(
+                                'https://www.facebook.com/hexaplusofficial/');
+                            if (await canLaunchUrl(url)) {
+                              await launchUrl(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          },
                           icon: const Icon(
                             FontAwesomeIcons.facebook,
                             color: Colors.white,

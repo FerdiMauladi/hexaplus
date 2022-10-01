@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FloatingButton extends StatefulWidget {
   const FloatingButton({
@@ -34,7 +35,15 @@ class _FloatingButtonState extends State<FloatingButton> {
         },
         child: status
             ? FloatingActionButton.extended(
-                onPressed: () {},
+                onPressed: () async {
+                  final Uri url = Uri.parse(
+                      'https://api.whatsapp.com/send?phone=6285171717367&text=Halo%20Mincan!%0ASaya%20ingin%20bertanya%20tentang%20produk%20dan%20jasa%20Hexa!%20');
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(
                     Radius.circular(15.0),
@@ -63,7 +72,15 @@ class _FloatingButtonState extends State<FloatingButton> {
                 ),
               )
             : FloatingActionButton.extended(
-                onPressed: () {},
+                onPressed: () async {
+                  final Uri url = Uri.parse(
+                      'https://api.whatsapp.com/send?phone=6285171717367&text=Halo%20Mincan!%0ASaya%20ingin%20bertanya%20tentang%20produk%20dan%20jasa%20Hexa!%20');
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
                 shape: const CircleBorder(),
                 backgroundColor: Colors.green,
                 label: Icon(

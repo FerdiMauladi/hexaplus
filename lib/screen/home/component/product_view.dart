@@ -8,15 +8,15 @@ class ProductView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+
     return SizedBox(
       width: double.infinity,
-      height: width < 600 ? height * 0.6 : height * 0.85,
+      height: height * 0.85,
       child: Stack(
         children: [
           Container(
             width: double.infinity,
-            height: width < 600 ? height * 0.6 : height * 0.85,
+            height: height * 0.85,
             decoration: const BoxDecoration(
               shape: BoxShape.rectangle,
               image: DecorationImage(

@@ -7,14 +7,16 @@ class HowToBuyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+
     return SizedBox(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height * 0.85,
+      height: height * 0.85,
       child: Stack(
         children: [
           Container(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height * 0.85,
+            height: height * 0.85,
             decoration: const BoxDecoration(
               shape: BoxShape.rectangle,
               image: DecorationImage(
