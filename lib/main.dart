@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hexa_smart/screen/faq/faq_view_model.dart';
+import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 import 'screen/company/company_screen.dart';
+import 'screen/faq/faq_screen.dart';
 import 'screen/home/home_screen.dart';
 import 'screen/howtobuy/howtobuy_screen.dart';
 import 'screen/product/product_screen.dart';
@@ -16,13 +19,18 @@ class HexaPlus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Semantics(
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => FaqViewModel(),
+        ),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Yorkten',
           scaffoldBackgroundColor: Colors.white,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
+          visualDensity: VisualDensity.compact,
         ),
         initialRoute: HomeScreen.route,
         routes: {
@@ -30,6 +38,7 @@ class HexaPlus extends StatelessWidget {
           CompanyScreen.route: (context) => const CompanyScreen(),
           ProductScreen.route: (context) => const ProductScreen(),
           HowToBuyScreen.route: (context) => const HowToBuyScreen(),
+          FaqScreen.route: (context) => const FaqScreen(),
         },
         onGenerateRoute: (settings) {
           if (settings.name == HomeScreen.route) {
@@ -54,6 +63,12 @@ class HexaPlus extends StatelessWidget {
             return MaterialPageRoute(
               builder: (context) {
                 return const HowToBuyScreen();
+              },
+            );
+          } else if (settings.name == FaqScreen.route) {
+            return MaterialPageRoute(
+              builder: (context) {
+                return const FaqScreen();
               },
             );
           }

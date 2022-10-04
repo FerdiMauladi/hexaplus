@@ -22,7 +22,7 @@ class HowToBuyView extends StatelessWidget {
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
-                  'assets/foto/gambar7.jpg',
+                  'assets/foto/gambar8.jpg',
                 ),
               ),
             ),

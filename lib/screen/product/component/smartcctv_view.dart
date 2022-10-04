@@ -236,7 +236,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Image.asset(
-                                      'produk/cctv/indoor/bardiIndoor.png',
+                                      'assets/produk/cctv/indoor/bardiIndoor.png',
                                       fit: BoxFit.contain,
                                       alignment: Alignment.bottomCenter,
                                       width: width * 0.5,
@@ -269,7 +269,7 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Image.asset(
-                                      'produk/cctv/outdoor/onassisOutdoor.png',
+                                      'assets/produk/cctv/outdoor/onassisOutdoor.png',
                                       fit: BoxFit.cover,
                                       alignment: Alignment.bottomCenter,
                                       width: width * 0.5,
@@ -387,8 +387,8 @@ class _SmartcctvViewState extends State<SmartcctvView> {
                             ? 980
                             : 950
                     : _current == 1
-                        ? 840
-                        : 770,
+                        ? 900
+                        : 820,
                 color: Colors.white,
               ),
               Positioned(

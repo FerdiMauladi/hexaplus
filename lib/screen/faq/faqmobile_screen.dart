@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../component/drawer.dart';
-import '../component/floatingbuttonicon.dart';
 import '../component/footer.dart';
 import '../home/home_screen.dart';
-import 'component/form_view.dart';
-import 'component/howtobuy_view.dart';
-import 'component/onlineshop_view.dart';
 
-class HowToBuyMobileScreen extends StatelessWidget {
-  const HowToBuyMobileScreen({Key? key}) : super(key: key);
+class FaqMobileScreen extends StatelessWidget {
+  const FaqMobileScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,17 +41,10 @@ class HowToBuyMobileScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Stack(
-        children: [
-          ListView(
-            children: const [
-              HowToBuyView(),
-              OnlineShopView(),
-              FormView(),
-              Footer(),
-            ],
-          ),
-          const FloatingButtonIcon(),
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        children: const [
+          Footer(),
         ],
       ),
     );

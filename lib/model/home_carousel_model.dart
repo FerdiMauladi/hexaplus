@@ -21,8 +21,8 @@ List<HomeCarouselModel> dataView = [
   ),
   HomeCarouselModel(
     image: 'assets/foto/gambar12.jpg',
-    title: 'Security Can be Smart',
-    subtitle1: 'Ingin Hidup Lebih aman, Nyaman dan Efisien?',
-    subtitle2: 'Hexa+ Hadir untuk membantu mengatasi masalah tersebut.',
+    title: 'Build your Smart Living',
+    subtitle1: 'Manfaatkan teknologi canggih dari Hexa+ untuk ',
+    subtitle2: 'membuat hidup anda lebih modern, aman, dan effisien ',
   ),
 ];
