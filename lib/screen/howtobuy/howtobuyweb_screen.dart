@@ -9,8 +9,11 @@ import '../component/sliverappbar.dart';
 import '../component/sliverheader.dart';
 import '../home/home_screen.dart';
 import '../product/product_screen.dart';
+import 'component/form_view.dart';
 import 'component/howtobuy_view.dart';
 import 'component/onlineshop_view.dart';
+import 'component/widget/button.dart';
+import 'component/widget/input.dart';
 import 'howtobuy_screen.dart';
 
 class HowToBuyWebScreen extends StatefulWidget {
@@ -42,6 +45,7 @@ class _HowToBuyWebScreenState extends State<HowToBuyWebScreen> {
                     [
                       const HowToBuyView(),
                       const OnlineShopView(),
+                      const FormView(),
                       const Footer(),
                     ],
                   ),

@@ -236,7 +236,7 @@ class _SmartLightViewState extends State<SmartLightView> {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Image.asset(
-                                      'produk/light/bulb/arbitBulb.png',
+                                      'assets/produk/light/bulb/arbitBulb.png',
                                       fit: BoxFit.contain,
                                       alignment: Alignment.bottomCenter,
                                       width: width * 0.5,
@@ -269,7 +269,7 @@ class _SmartLightViewState extends State<SmartLightView> {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Image.asset(
-                                      'produk/light/strip/arbitStrip.png',
+                                      'assets/produk/light/strip/arbitStrip.png',
                                       fit: BoxFit.contain,
                                       alignment: Alignment.bottomCenter,
                                       width: width * 0.5,
@@ -387,8 +387,8 @@ class _SmartLightViewState extends State<SmartLightView> {
                             ? 980
                             : 950
                     : _current == 0
-                        ? 840
-                        : 770,
+                        ? 860
+                        : 800,
                 color: Colors.white,
               ),
               Positioned(

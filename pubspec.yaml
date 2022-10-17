@@ -40,6 +40,7 @@ dependencies:
   carousel_slider: ^4.1.1
   google_fonts: ^3.0.1
   url_launcher: ^6.1.5
+  provider: ^6.0.3
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,17 @@ flutter:
     - assets/icon/
     - assets/logo/
     - assets/produk/
+    - assets/produk/cctv/
+    - assets/produk/cctv/indoor/
+    - assets/produk/cctv/outdoor/
+    - assets/produk/doorlock/
+    - assets/produk/doorlock/alumunium/
+    - assets/produk/doorlock/kaca/
+    - assets/produk/doorlock/kayu/
+    - assets/produk/light/
+    - assets/produk/light/bulb/
+    - assets/produk/light/strip/
+    - assets/produk/lainnya/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

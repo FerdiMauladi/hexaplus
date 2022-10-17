@@ -60,6 +60,8 @@ List<CompanyGridModel> dataOnlineShopGrid = [
   ),
   CompanyGridModel(
     image: 'assets/logo/bukalapak.png',
+    nama:
+        'https://www.bukalapak.com/u/hexaplus_842659?from=omnisearch&from_keyword_history=false&search_source=omnisearch_user&source=navbar',
   ),
   CompanyGridModel(
     image: 'assets/logo/blibli.png',
@@ -73,5 +75,17 @@ List<CompanyGridModel> dataOnlineShopGrid = [
   CompanyGridModel(
     image: 'assets/logo/olx.png',
     nama: 'https://www.olx.co.id/profile/89971776',
+  ),
+  CompanyGridModel(
+    image: 'assets/logo/shopee.png',
+    nama: 'https://shopee.co.id/hexaplus',
+  ),
+  CompanyGridModel(
+    image: 'assets/logo/jdid.png',
+    nama: 'https://www.jd.id/shop/Hexa-Plus_10141741.html',
+  ),
+  CompanyGridModel(
+    image: 'assets/logo/carousell.png',
+    nama: 'https://id.carousell.com/u/hexaplus/',
   ),
 ];

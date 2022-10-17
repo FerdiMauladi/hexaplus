@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../component/drawer.dart';
 import '../component/floatingbutton.dart';
+import '../component/floatingbuttonicon.dart';
 import '../component/footer.dart';
 import '../home/home_screen.dart';
 import 'component/jelajahimerek.dart';
@@ -50,20 +51,25 @@ class ProductMobileScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: ListView(
-        children: const [
-          OurProductView(),
-          KategoriProduk(),
-          SmartcctvView(),
-          WhiteSpace(),
-          SmartDoorLockView(),
-          WhiteSpace(),
-          SmartLightView(),
-          WhiteSpace(),
-          SmartAnotherView(),
-          JelajahiMerek(),
-          Merek(),
-          Footer(),
+      body: Stack(
+        children: [
+          ListView(
+            children: const [
+              OurProductView(),
+              KategoriProduk(),
+              SmartcctvView(),
+              WhiteSpace(),
+              SmartDoorLockView(),
+              WhiteSpace(),
+              SmartLightView(),
+              WhiteSpace(),
+              SmartAnotherView(),
+              JelajahiMerek(),
+              Merek(),
+              Footer(),
+            ],
+          ),
+          const FloatingButtonIcon(),
         ],
       ),
     );

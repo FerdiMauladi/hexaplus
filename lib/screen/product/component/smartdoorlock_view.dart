@@ -236,7 +236,7 @@ class _SmartDoorLockViewState extends State<SmartDoorLockView> {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Image.asset(
-                                      'produk/doorlock/kayu/onassisk10pro.png',
+                                      'assets/produk/doorlock/kayu/onassisk10pro.png',
                                       fit: BoxFit.contain,
                                       alignment: Alignment.bottomCenter,
                                       width: MediaQuery.of(context).size.width *
@@ -270,7 +270,7 @@ class _SmartDoorLockViewState extends State<SmartDoorLockView> {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Image.asset(
-                                      'produk/doorlock/alumunium/onassisd65.png',
+                                      'assets/produk/doorlock/alumunium/onassisd65.png',
                                       fit: BoxFit.contain,
                                       alignment: Alignment.bottomCenter,
                                       width: MediaQuery.of(context).size.width *
@@ -304,7 +304,7 @@ class _SmartDoorLockViewState extends State<SmartDoorLockView> {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Image.asset(
-                                      'produk/doorlock/kaca/arbitGlass.png',
+                                      'assets/produk/doorlock/kaca/arbitGlass.png',
                                       fit: BoxFit.contain,
                                       alignment: Alignment.bottomCenter,
                                       width: MediaQuery.of(context).size.width *
@@ -424,7 +424,7 @@ class _SmartDoorLockViewState extends State<SmartDoorLockView> {
                             : 950
                     : _current == 0
                         ? 840
-                        : 770,
+                        : 800,
                 color: Colors.white,
               ),
               Positioned(

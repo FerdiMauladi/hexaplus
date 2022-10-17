@@ -4,6 +4,7 @@ import '../component/drawer.dart';
 import '../component/floatingbuttonicon.dart';
 import '../component/footer.dart';
 import '../home/home_screen.dart';
+import 'component/form_view.dart';
 import 'component/howtobuy_view.dart';
 import 'component/onlineshop_view.dart';
 
@@ -49,6 +50,7 @@ class HowToBuyMobileScreen extends StatelessWidget {
             children: const [
               HowToBuyView(),
               OnlineShopView(),
+              FormView(),
               Footer(),
             ],
           ),
