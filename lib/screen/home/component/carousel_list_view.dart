@@ -108,18 +108,17 @@ class CarouselListView extends StatelessWidget {
                 ),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                    disabledForegroundColor: Colors.blue.withOpacity(0.38),
-                    disabledBackgroundColor: Colors.blue.withOpacity(0.12),
-                    textStyle: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
+                      backgroundColor: Colors.deepOrange,
+                      disabledForegroundColor:
+                          Colors.deepOrange.withOpacity(0.38),
+                      disabledBackgroundColor:
+                          Colors.deepOrange.withOpacity(0.12),
+                      textStyle: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      shape: const StadiumBorder()),
                   onPressed: () async {
                     final Uri url = Uri.parse(
                         'https://api.whatsapp.com/send?phone=6285171717367&text=Halo%20Mincan!%0ASaya%20ingin%20bertanya%20tentang%20produk%20dan%20jasa%20Hexa!%20');

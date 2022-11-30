@@ -50,7 +50,7 @@ class Header extends StatelessWidget {
             margin: const EdgeInsets.only(top: 20.0, bottom: 15.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MouseRegion(
                   cursor: SystemMouseCursors.click,

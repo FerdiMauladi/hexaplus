@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../howtobuy/howtobuy_screen.dart';
 
@@ -80,6 +81,42 @@ class BuyView extends StatelessWidget {
                               color: Colors.black,
                             ),
                           ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(
+                        top: 30,
+                        bottom: 50,
+                      ),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.deepOrange,
+                            disabledForegroundColor:
+                                Colors.deepOrange.withOpacity(0.38),
+                            disabledBackgroundColor:
+                                Colors.deepOrange.withOpacity(0.12),
+                            textStyle: const TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                            shape: const StadiumBorder()),
+                        onPressed: () async {
+                          // final Uri url =
+                          //     Uri.parse('https://store.hexa-smart.com/');
+                          // if (await canLaunchUrl(url)) {
+                          //   await launchUrl(url);
+                          // } else {
+                          //   throw 'Could not launch $url';
+                          // }
+                          Navigator.of(context).pushNamed(HowToBuyScreen.route);
+                        },
+                        child: const Padding(
+                          padding: EdgeInsets.all(13.0),
+                          child: Text(
+                            'Learn More',
+                          ),
                         ),
                       ),
                     ),

@@ -25,21 +25,26 @@ class SliverAppbarCustom extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          MouseRegion(
-            cursor: SystemMouseCursors.click,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed(HomeScreen.route);
-              },
-              child: Container(
-                width: 100,
-                height: 40,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  image: DecorationImage(
-                    fit: BoxFit.contain,
-                    image: AssetImage(
-                      'assets/hexa/logoHexa_tulisa.png',
+          Container(
+            margin: const EdgeInsets.only(
+              left: 25.0,
+            ),
+            child: MouseRegion(
+              cursor: SystemMouseCursors.click,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed(HomeScreen.route);
+                },
+                child: Container(
+                  width: 100,
+                  height: 40,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    image: DecorationImage(
+                      fit: BoxFit.contain,
+                      image: AssetImage(
+                        'assets/hexa/logoHexa_tulisa.png',
+                      ),
                     ),
                   ),
                 ),
